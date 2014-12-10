@@ -1,7 +1,7 @@
 *.log
+*.sql
 .htaccess
-sitemap.xml
-sitemap.xml.gz
+sitemap.*
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
@@ -10,4 +10,10 @@ wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
+wp-content/themes/twenty*
 wp-content/wp-cache-config.php
+
+# hidden files
+*.DS_Store
+*Thumbs.db
+*.sass-cache*
