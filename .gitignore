@@ -1,0 +1,24 @@
+# Some global rules
+.sass-cache
+*.sublime-project
+*.sublime-workspace
+*.css.map
+
+/*
+!.gitignore
+!Guardfile
+!wp-content/
+!wp-includes/
+!sql/
+
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+!wp-content/.htaccess
+
+wp-content/uploads/*
+!wp-content/uploads/.htaccess
+
+wp-includes/*
+!wp-includes/.htaccess

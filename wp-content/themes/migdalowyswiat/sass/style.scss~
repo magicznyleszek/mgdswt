@@ -1,0 +1,73 @@
+/*!
+    Theme Name: Neatcoding Theme
+    Description: Szablon strony
+    Author: jan@neatcoding.com
+*/
+
+
+// --------------------------------------------------
+// compass imports
+// --------------------------------------------------
+
+@import "compass/reset";
+@import "compass/css3";
+
+
+// --------------------------------------------------
+// main config with color pallette and other variables
+// --------------------------------------------------
+
+@import "config";
+
+
+// --------------------------------------------------
+// WordPress styles
+// --------------------------------------------------
+
+// standard WordPress styles
+@import "wordpress/wordpress";
+// admin bar customization styles
+@import "wordpress/admin-bar";
+
+
+// --------------------------------------------------
+// helpers and tools used across the project
+// --------------------------------------------------
+
+@import "helpers/mixins";
+
+
+// --------------------------------------------------
+// base fonts and typography
+// --------------------------------------------------
+
+@import "base/fonts";
+@import "base/typography";
+
+
+// --------------------------------------------------
+// third party libraries
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// main sections of the layout
+// --------------------------------------------------
+
+// @import "layout/page";
+// @import "layout/header";
+
+
+// --------------------------------------------------
+// small modules and classes
+// --------------------------------------------------
+
+// @import "modules/class-name";
+
+
+// --------------------------------------------------
+// end specified stylesheets
+// --------------------------------------------------
+
+// @import "ie";
+// @import "print";

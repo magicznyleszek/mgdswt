@@ -1,0 +1,1 @@
+<?php /* CPT here */ ?>
