@@ -1,0 +1,37 @@
+// configuration
+
+// resets
+@import 'config/resets';
+
+// fonts
+@import 'config/fonts';
+
+// all descriptive variables (colors, sizes, etc.) are defined here
+@import 'config/variables/descriptive';
+
+// most of the functional variables are kept in each module configuration file, here are only the commons
+@import 'config/variables/functional';
+
+// useful mixins and functions
+@import 'config/helpers';
+
+
+/*
+    naming convention for abbreviations:
+    
+    c - color
+    d - duration
+    f - fraction
+    h - height
+    o - opacity
+    p - percent
+    w - width
+    z - z-index
+    
+    txt - text
+    bg - background
+    sh - shadow
+    br - border radius
+    
+    single-letter abbreviations should always be on the end
+*/

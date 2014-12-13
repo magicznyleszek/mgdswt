@@ -2,8 +2,8 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "/"
-sass_dir = "sass"
+css_dir = "css"
+sass_dir = "scss"
 images_dir = "img"
 javascripts_dir = "js"
 
@@ -17,7 +17,7 @@ output_style = :compressed
 # line_comments = false
 
 # To enable source mapping. Uncomment:
-# sass_options = {:sourcemap => true}
+sass_options = {:sourcemap => true}
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

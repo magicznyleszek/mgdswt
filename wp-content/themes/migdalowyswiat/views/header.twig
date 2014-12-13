@@ -2,28 +2,31 @@
 <!--[if lte IE 8]><html {{site.language_attributes}} class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html {{site.language_attributes}}><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>{{wp_title}}</title>
-	<link rel="stylesheet" href="{{theme.link}}/style.css">
-	<link rel="shortcut icon" href="{{theme.link}}/favicon.ico">
+    <title>{{wp_title}}</title>
+    <link rel="stylesheet" href="{{theme.link}}/css/main.css">
+    <link rel="shortcut icon" href="{{theme.link}}/favicon.ico">
 
-	{{function('wp_head')}}
+    <!-- custom fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Hind:400,300,600|Hammersmith+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-	<script src="{{theme.link}}/js/modernizr.min.js"></script>
+    {{function('wp_head')}}
+
+    <script src="{{theme.link}}/js/modernizr.min.js"></script>
 </head>
 <body {{ body_class }}>
-	<header>
+    <header>
 
-		{% if glowneMenu.get_items is not empty %}
-		<nav>
-			<ul>
-			{% for item in glowneMenu.get_items %}
-				<li><a href="{{item.url}}">{{ item.title }}</a></li>
-			{% endfor %}
-			</ul>
-		</nav>
-		{% endif %}
+        {% if glowneMenu.get_items is not empty %}
+        <nav>
+            <ul>
+            {% for item in glowneMenu.get_items %}
+                <li><a href="{{item.url}}">{{ item.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </nav>
+        {% endif %}
 
-	</header>
+    </header>

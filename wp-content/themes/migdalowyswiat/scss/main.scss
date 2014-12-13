@@ -1,0 +1,16 @@
+// main styles file
+
+// compass library
+@import 'compass';
+
+// configuration files
+@import "config";
+
+// basic normalization
+@import 'base';
+
+// all modules
+@import 'modules';
+
+// main layout styling components
+@import 'layout';
