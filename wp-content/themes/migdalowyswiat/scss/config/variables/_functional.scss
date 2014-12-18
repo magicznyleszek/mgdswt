@@ -5,7 +5,7 @@ $app-txt-c: $c-black;
 $app-bg-c: $c-white;
 
 // layout widths
-$app-content-w: 1024px;
+$app-content-w: 1170px;
 
 // breakpoints
 $break-bigger: 1280px;
@@ -30,12 +30,12 @@ $hr-bg-c: $c-silver;
 $hr-h: 2px;
 
 // focus and selection
-$focus-outline-c: $c-crimson;
+$focus-outline-c: $c-salomie;
 $selection-txt-c: $c-white;
-$selection-bg-c: $c-crimson;
+$selection-bg-c: $c-salomie;
 
 // code element
-$code-family: $family-sourceCodePro;
+$code-family: 'monospace';
 $code-bg-c: $c-silverLighter;
 $code-br: 2px;
 $code-sh: 0 0 0 1px $c-silver;

@@ -67,20 +67,3 @@
     width: 100%;
     text-align: left;
 }
-
-[am-button~="important"] {
-    color: $button-important-txt-c;
-    background-color: $button-important-bg-c;
-    @include box-shadow($button-important-sh);
-    &[disabled] {
-        color: $button-default-txt-c;
-        background-color: $button-default-bg-c;
-        @include box-shadow($button-default-sh);
-    }
-    &:not([disabled]):hover {
-        background-color: $button-important-bg-hover-c;
-    }
-    &:not([disabled]):active, &:not([disabled]).active {
-        background-color: $button-important-bg-active-c;
-    }
-}

@@ -3,18 +3,17 @@
 // colors
 $c-black: black;
 $c-white: white;
-$c-crimson: hsl(350, 90%, 50%);
-$c-crimsonLight: hsl(350, 100%, 60%);
-$c-crimsonLighter: hsl(350, 100%, 70%);
-$c-crimsonDark: hsl(350, 90%, 45%);
-$c-silver: hsl(0, 0%, 80%);
-$c-silverLight: hsl(0, 0%, 85%);
-$c-silverLighter: hsl(0, 0%, 90%);
-$c-silverDark: hsl(0, 0%, 75%);
+
+$c-salomie: hsla(45, 100%, 75%, 1); // main accent
+
+$c-nero: hsla(0, 0%, 15%, 1); // main color
+
+$c-silverDark: hsla(0, 0%, 44%, 1);
+$c-silver: hsla(0, 0%, 50%, 1); // secondary color
+$c-silverLight: hsla(0, 0%, 58%, 1); // secondary color
+$c-silverLighter: hsla(0, 0%, 66%, 1);
 
 // font families
-$family-sourceSansPro: "Source Sans Pro", sans-serif;
-$family-sourceCodePro: "Source Code Pro", monospace;
 $family-hind: "Hind", sans-serif;
 $family-hammersmithOne: "Hammersmith One", sans-serif;
 
