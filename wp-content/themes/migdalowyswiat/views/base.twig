@@ -1,31 +1,23 @@
-{% include "html-head.twig" %}
+{% spaceless %}
 
-{% include "header.twig" %}
+    {% include "partials/html-head.twig" %}
 
-<div id="appContentWrapper">
+    {% include "partials/header.twig" %}
 
-    <section id="appContent" role="main">
+    <div id="appContentWrapper">
 
-        <pre>
-            {{ posts|print_r }}
-        </pre>
+        <section id="appContent" role="main">
 
-    </section><!--
+            {% block content %}{% endblock %}
 
- --><aside id="appSidebar">
+        </section>
 
-        <h3>Newsletter</h3>
+        {% include "partials/sidebar.twig" %}
 
-        <h3>O mnie</h3>
+    </div>
 
-        <h3>Kategorie</h3>
+    {% include "partials/footer.twig" %}
 
-        <h3>Ulubione</h3>
+    {% include "partials/html-end.twig" %}
 
-    </aside>
-
-</div>
-
-{% include "footer.twig" %}
-
-{% include "html-end.twig" %}
+{% endspaceless %}
