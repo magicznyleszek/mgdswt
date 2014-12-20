@@ -55,6 +55,7 @@ img, svg, embed, object, video {
 }
 
 input, select, textarea, button {
+    line-height: $rootLineHeight;
     @include input-placeholder {
         font-size: inherit;
         line-height: $rootLineHeight;

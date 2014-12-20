@@ -11,18 +11,18 @@
     border: 0;
     padding: rem($space-tiny + 1) rem($space-tiny) rem($space-tiny - 1);
     color: $input-txt-c;
-    @include box-shadow($input-sh);
+    font-size: rem(12px);
     background-color: $input-bg-c;
-    border-radius: $input-br;
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     @include box-sizing(border-box);
-    &:not([disabled]):hover {
-        background-color: $input-bg-hover-c;
+    @include box-shadow($input-default-sh);
+    &:hover {
+        @include box-shadow($input-default-hover-sh);
     }
-    &:not([disabled]):focus {
-        background-color: $input-bg-focus-c;
+    &:focus {
+        @include box-shadow($input-default-focus-sh);
     }
 }
 
@@ -30,4 +30,14 @@
     color: inherit;
     @include box-shadow(none);
     background-color: transparent;
+}
+
+[am-textBox~="special"] {
+    @include box-shadow($input-special-sh);
+    &:hover {
+        @include box-shadow($input-special-hover-sh);
+    }
+    &:focus {
+        @include box-shadow($input-special-focus-sh);
+    }
 }

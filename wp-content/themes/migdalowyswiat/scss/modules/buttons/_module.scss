@@ -24,7 +24,6 @@
     color: $button-default-txt-c;
     background-color: $button-default-bg-c;
     @include box-shadow($button-default-sh);
-    @include border-radius($input-br);
     @include transition(background-color $d-faster);
     &:not([disabled]):hover {
         background-color: $button-default-bg-hover-c;
@@ -48,6 +47,14 @@
         @include opacity(0.5);
         background-color: transparent;
     }
+}
+
+[am-button~="hidden"] {
+    visibility: hidden;
+    @include opacity(0);
+    width: 0;
+    height: 0;
+    @include absolute(top 0 left 0);
 }
 
 [am-button~="spaceless"] {

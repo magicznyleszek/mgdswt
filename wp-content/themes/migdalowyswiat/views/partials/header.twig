@@ -19,31 +19,24 @@
 
             <!-- search box -->
             <div id="appMenuSearch" am-box="paddedH">
-                <input am-textBox type="text" name="search-box" value="" placeholder="Wyszukaj na blogu">
+                <form id="searchform" method="get" action="{{ site.url }}/index.php">
+                    <input am-textBox type="text" name="s" id="s" value="" placeholder="Wyszukaj na blogu">
+                    <input am-button="hidden" type="submit" value="Search">
+                </form>
             </div>
 
             <!-- social nav -->
             <nav id="appMenuSocial" am-box="paddedH" am-text="centered">
                 <ul am-list="inline spacedHLittle">
+                    {% for item in socialMenu %}
 
-                    <li>
-                        <a href="#TODO" am-button="naked spaceless">
-                            <img src="{{ theme.link }}/img/icons/envelope-black.png" alt="Mail" />
-                        </a>
-                    </li>
+                        <li>
+                            <a href="{{ item.url }}" am-button="naked spaceless" target="_blank">
+                                <img src="{{ theme.link }}/img/icons/{{ item.icon }}.png" alt="{{ item.title }}">
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="#TODO" am-button="naked spaceless">
-                            <img src="{{ theme.link }}/img/icons/pinterest-black.png" alt="Pinterest" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#TODO" am-button="naked spaceless">
-                            <img src="{{ theme.link }}/img/icons/instagram-black.png" alt="Instagram" />
-                        </a>
-                    </li>
-
+                    {% endfor %}
                 </ul>
             </nav>
 

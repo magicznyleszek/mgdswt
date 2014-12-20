@@ -17,7 +17,7 @@
     @include box-sizing(border-box);
     width: rem($w-small);
     height: rem($w-small);
-    @include box-shadow($input-sh);
+    @include box-shadow($input-default-sh);
     color: $input-txt-c;
     background-color: $input-bg-c;
     &:after {

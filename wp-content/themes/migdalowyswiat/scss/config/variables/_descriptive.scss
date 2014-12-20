@@ -3,14 +3,16 @@
 // colors
 $c-black: black;
 $c-white: white;
-
-$c-salomie: hsla(45, 100%, 75%, 1); // main accent
-
-$c-nero: hsla(0, 0%, 15%, 1); // main color
-
-$c-silverDark: hsla(0, 0%, 44%, 1);
-$c-silver: hsla(0, 0%, 50%, 1); // secondary color
-$c-silverLight: hsla(0, 0%, 58%, 1); // secondary color
+// main accent
+$c-salomieDark: hsla(45, 100%, 67%, 1);
+$c-salomie: hsla(45, 100%, 75%, 1);
+$c-salomieLight: hsla(45, 100%, 83%, 1);
+// main color
+$c-nero: hsla(0, 0%, 15%, 1);
+// secondary color
+$c-silverDark: hsla(0, 0%, 42%, 1);
+$c-silver: hsla(0, 0%, 50%, 1);
+$c-silverLight: hsla(0, 0%, 58%, 1);
 $c-silverLighter: hsla(0, 0%, 66%, 1);
 
 // font families

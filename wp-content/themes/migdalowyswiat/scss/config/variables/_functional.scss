@@ -44,12 +44,18 @@ $code-sh: 0 0 0 1px $c-silver;
 $link-txt-c: inherit;
 $link-txt-hover-c: $c-salomie;
 
-// inputs
-$input-br: 2px;
-$input-sh: 0 0 0 1px $c-silver;
-$input-txt-c: $c-black;
-$input-bg-c: $c-silverLighter;
-$input-bg-hover-c: $c-silverLight;
-$input-bg-focus-c: $c-silver;
-$input-disabled-o: $f-big;
+// inputs commons
+$input-txt-c: $c-silverLight;
 $input-placeholder-txt-c: rgba($input-txt-c, $f-big);
+$input-bg-c: transparent;
+$input-disabled-o: $f-big;
+
+// inputs default
+$input-default-sh: 0 0 0 1px $c-silverLight;
+$input-default-hover-sh: 0 0 0 2px $c-silverLight;
+$input-default-focus-sh: 0 0 0 2px $c-silver;
+
+// input special
+$input-special-sh: 0 0 0 1px $c-salomie;
+$input-special-hover-sh: 0 0 0 2px $c-salomie;
+$input-special-focus-sh: 0 0 0 2px $c-salomieDark;
