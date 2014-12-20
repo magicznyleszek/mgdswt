@@ -2141,10 +2141,16 @@ label:not(:last-child),
 
 /* line 5, ../scss/layout/_header.scss */
 #appMenu {
+  z-index: 90;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid #ffdf80;
+  background-color: rgba(255, 255, 255, 0.96);
 }
 
-/* line 9, ../scss/layout/_header.scss */
+/* line 13, ../scss/layout/_header.scss */
 #appMenuPages {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2155,7 +2161,7 @@ label:not(:last-child),
   vertical-align: middle;
 }
 
-/* line 13, ../scss/layout/_header.scss */
+/* line 17, ../scss/layout/_header.scss */
 #appMenuSearch {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2166,7 +2172,7 @@ label:not(:last-child),
   vertical-align: middle;
 }
 
-/* line 17, ../scss/layout/_header.scss */
+/* line 21, ../scss/layout/_header.scss */
 #appMenuSocial {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2177,9 +2183,9 @@ label:not(:last-child),
   vertical-align: middle;
 }
 
-/* line 22, ../scss/layout/_header.scss */
+/* line 26, ../scss/layout/_header.scss */
 #appBanner {
-  padding-top: 5rem;
+  padding-top: 8.5rem;
   padding-bottom: 2.5rem;
 }
 

@@ -3,7 +3,11 @@
 }
 
 #appMenu {
+    z-index: $z-9;
+    @include fixed(top 0 left 0);
+    width: 100%;
     border-bottom: 1px solid $c-salomie;
+    background-color: $appMenu-bg-c;
 }
 
 #appMenuPages {
@@ -20,6 +24,6 @@
 }
 
 #appBanner {
-    padding-top: rem(80px);
+    padding-top: rem(80px + $appMenu-h);
     padding-bottom: rem(40px);
 }
