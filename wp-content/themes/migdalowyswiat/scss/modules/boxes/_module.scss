@@ -10,13 +10,24 @@
     @include box-sizing(border-box);
 }
 
+[am-box~="wrapper"] {
+    max-width: $app-content-w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 [am-box~="inline"] {
     display: inline-block;
     vertical-align: middle;
 }
 
 [am-box~="padded"] {
-    padding: rem($space-large);
+    padding: rem($space-medium);
+}
+
+[am-box~="paddedH"] {
+    padding-left: rem($space-medium);
+    padding-right: rem($space-medium);
 }
 
 [am-box~="black"] {

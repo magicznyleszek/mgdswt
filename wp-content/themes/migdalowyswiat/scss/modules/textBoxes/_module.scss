@@ -9,13 +9,15 @@
     outline: 0;
     margin: 0;
     border: 0;
-    padding: rem($space-tiny);
+    padding: rem($space-tiny + 1) rem($space-tiny) rem($space-tiny - 1);
     color: $input-txt-c;
     @include box-shadow($input-sh);
     background-color: $input-bg-c;
     border-radius: $input-br;
     display: inline-block;
     vertical-align: middle;
+    width: 100%;
+    @include box-sizing(border-box);
     &:not([disabled]):hover {
         background-color: $input-bg-hover-c;
     }

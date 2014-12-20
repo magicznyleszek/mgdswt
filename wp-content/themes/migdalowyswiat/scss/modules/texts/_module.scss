@@ -13,7 +13,9 @@
 [am-text~="uppercased"] { text-transform: uppercase; }
 [am-text~="untransformed"] { text-transform: none; }
 
-[am-text~="dimmed"] { @include opacity($f-big); }
+// letter spacing
+[am-text~="spaced"] { letter-spacing: rem(1px); }
+[am-text~="spacedBig"] { letter-spacing: rem(2px); }
 
 // trims text with an ellipsis
 [am-text~="trimmed"] {
@@ -21,3 +23,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+// colors
+[am-text~="dimmed"] { @include opacity($f-big); }
+[am-text~="silver"] { color: $c-silver; }
+[am-text~="silverLight"] { color: $c-silverLight; }

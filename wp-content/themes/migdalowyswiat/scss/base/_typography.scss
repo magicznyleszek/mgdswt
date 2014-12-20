@@ -1,11 +1,11 @@
 html {
     font: 400 #{$rootFontSize}/$rootLineHeight $rootFontFamily;
-    @media screen and (min-width: #{$break-bigger}) {
-        font-size: $rootFontSize * 1.2;
-    }
-    @media screen and (max-width: #{$break-smaller}) {
-        font-size: $rootFontSize * 0.8;
-    }
+    // @media screen and (min-width: #{$break-bigger}) {
+    //     font-size: $rootFontSize * 1.2;
+    // }
+    // @media screen and (max-width: #{$break-smaller}) {
+    //     font-size: $rootFontSize * 0.8;
+    // }
 }
 
 h1, h2, h3, h4 {
@@ -20,11 +20,16 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: rem(36px);
+    font-family: $family-hammersmithOne;
+    text-transform: uppercase;
+    letter-spacing: rem(1px);
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: rem(1px);
 }
 
 h4 {

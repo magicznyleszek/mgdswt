@@ -1,19 +1,61 @@
 <header id="appHeader">
 
-    {% if glowneMenu.get_items is not empty %}
+    <section id="appMenu" am-box="ruled">
 
-        <nav id="appMenu">
+        <div am-box="wrapper">
 
-            <ul am-list="inline">
-                {% for item in glowneMenu.get_items %}
-                    <li><a href="{{item.url}}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
+            <!-- pages nav -->
+            {% if glowneMenu.get_items is not empty %}
+                <nav id="appMenuPages">
+                    <ul am-list="inline spaced" am-text="uppercased">
+                        {% for item in glowneMenu.get_items %}
 
-        </nav>
+                            <li><a href="{{item.url}}">{{ item.title }}</a></li>
 
-    {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
 
-    <img id="logo" src="{{theme.link}}/img/migdalowyswiat-logo-420.jpg">
+            <!-- search box -->
+            <div id="appMenuSearch" am-box="paddedH">
+                <input am-textBox type="text" name="search-box" value="" placeholder="Wyszukaj na blogu">
+            </div>
+
+            <!-- social nav -->
+            <nav id="appMenuSocial" am-box="paddedH" am-text="centered">
+                <ul am-list="inline spacedHLittle">
+
+                    <li>
+                        <a href="#TODO" am-button="naked spaceless">
+                            <img src="{{ theme.link }}/img/icons/envelope-black.png" alt="Mail" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#TODO" am-button="naked spaceless">
+                            <img src="{{ theme.link }}/img/icons/pinterest-black.png" alt="Pinterest" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#TODO" am-button="naked spaceless">
+                            <img src="{{ theme.link }}/img/icons/instagram-black.png" alt="Instagram" />
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </section>
+
+    <section id="appBanner" am-text="centered">
+
+        <a href="{{ site.url }}" am-button="naked spaceless"><img id="logo" src="{{theme.link}}/img/migdalowyswiat-logo-420.jpg"></a>
+
+    </section>
+
 
 </header>

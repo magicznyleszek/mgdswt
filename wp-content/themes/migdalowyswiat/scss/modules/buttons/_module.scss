@@ -14,11 +14,13 @@
     margin: 0;
     border: 0;
     outline: 0;
-    padding: rem($space-small) rem($space-medium);
+    padding: rem($space-medium + 1px) rem($space-medium) rem($space-medium - 1px);
     line-height: 1;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: $button-default-txt-c;
     background-color: $button-default-bg-c;
     @include box-shadow($button-default-sh);
@@ -39,13 +41,17 @@
     background-color: transparent;
     font-weight: inherit;
     &:not([disabled]):hover {
-        @include opacity(0.8);
+        @include opacity(0.75);
         background-color: transparent;
     }
     &:not([disabled]):active, &:not([disabled]).active {
-        @include opacity(0.6);
+        @include opacity(0.5);
         background-color: transparent;
     }
+}
+
+[am-button~="spaceless"] {
+    padding: 0 !important;
 }
 
 [am-button~="spacelessH"] {
