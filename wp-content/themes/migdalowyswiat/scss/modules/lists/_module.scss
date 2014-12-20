@@ -28,6 +28,13 @@
     }
 }
 
+[am-list~="spacedHLittle"] {
+    & > li {
+        padding-left: rem($w-little);
+        padding-right: rem($w-little);
+    }
+}
+
 [am-list~="padded"] {
     padding: rem($w-small);
 }
