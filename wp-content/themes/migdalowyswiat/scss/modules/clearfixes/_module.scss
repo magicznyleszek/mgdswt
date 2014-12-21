@@ -4,7 +4,7 @@
     <h3 am-clearfix></h3>
 */
 
-[am-clearfix]{
+[am-clearfix] {
     @include clearfix();
 }
 

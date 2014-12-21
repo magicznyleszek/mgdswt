@@ -14,17 +14,6 @@ a {
     }
 }
 
-hr {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: $hr-h;
-    border: 0;
-    background-color: $hr-bg-c;
-}
-
 :focus {
     outline-color: $focus-outline-c;
     outline-style: auto;

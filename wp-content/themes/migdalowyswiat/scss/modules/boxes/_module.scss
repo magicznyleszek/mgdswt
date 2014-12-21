@@ -16,6 +16,10 @@
     margin-right: auto;
 }
 
+[am-box~="enclosed"] {
+    overflow: auto;
+}
+
 [am-box~="inline"] {
     display: inline-block;
     vertical-align: middle;

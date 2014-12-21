@@ -12,3 +12,14 @@
     font-size: rem(12px);
     @include column(1,6);
 }
+
+.post-social {
+    hr {
+        @include column(2,5);
+        vertical-align: middle;
+    }
+    nav {
+        @include column(1,5);
+        vertical-align: middle;
+    }
+}

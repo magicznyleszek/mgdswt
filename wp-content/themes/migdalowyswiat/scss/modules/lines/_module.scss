@@ -1,0 +1,20 @@
+// lines module
+
+/*
+    <span am-line="inline"></span>
+*/
+
+[am-line] {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: rem($hr-h);
+    border: 0;
+    background-color: $hr-bg-c;
+}
+
+[am-line~="inline"] {
+    display: inline-block;
+    vertical-align: middle;
+}

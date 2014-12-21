@@ -1,0 +1,51 @@
+<article>
+
+    <!-- post header -->
+    <header am-box="enclosed" am-text="centered">
+
+        <h2><a href="{{ post.link }}">{{ post.post_title }}</a></h2>
+
+        <!-- post meta -->
+        <div am-text="silver uppercased spacedBig">
+
+            <span am-box="inline">{{ post.post_date|date }}</span>
+
+            <ul am-list="inline spacedHLittle">
+                {% for term in post.terms('categories') %}
+                    <li><a href="{{ term.link }}">{{term.name}}</a></li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+    </header>
+
+    <!-- post excerpt -->
+    <section>
+        {{ post.get_preview(200, false, '&rarr;', false) }}
+    </section>
+
+    <!-- post social -->
+    <footer class="post-social">
+
+        <hr am-line="inline">
+
+        <nav am-box am-text="centered">
+            <ul am-list="inline spacedHLittle">
+                {% for item in socialMenu %}
+
+                    <li>
+                        <a href="{{ item.url }}" am-button="naked spaceless" target="_blank">
+                            <img src="{{ theme.link }}/img/icons/{{ item.icon }}.png" alt="{{ item.title }}">
+                        </a>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <hr am-line="inline">
+
+    </footer>
+
+</article>

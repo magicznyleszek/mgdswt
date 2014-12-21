@@ -4,29 +4,7 @@
 {% block content %}
 
     {% for post in posts %}
-        <article>
-
-            <header am-text="centered">
-
-                <h2><a href="{{ post.link }}">{{ post.post_title }}</a></h2>
-
-                <div am-text="silver uppercased spacedBig">
-
-                    <span am-box="inline">{{ post.post_date|date }}</span>
-
-                    <ul am-list="inline spacedHLittle">
-                        {% for term in post.terms('categories') %}
-                            <li><a href="{{ term.link }}">{{term.name}}</a></li>
-                        {% endfor %}
-                    </ul>
-
-                </div>
-
-            </header>
-
-            {{ post.get_preview(200, false, '&rarr;', false) }}
-
-        </article>
+        {% include "partials/content-post.twig" %}
     {% endfor %}
 
     {#

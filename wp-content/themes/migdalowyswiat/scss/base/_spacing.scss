@@ -2,8 +2,9 @@
 
 // vertical
 h1, h2, h3, h4, h5, h6,
-p, ol, ul, blockquote, hr,
+p, ol, ul, blockquote,
 article, section, header, footer, table, figure,
+[am-line]:not([am-line~="inline"]),
 [am-progress]:not([am-progress~="inline"]),
 table > caption {
     &:not(:last-child) {
