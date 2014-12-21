@@ -4,12 +4,12 @@
     <h3>Newsletter</h3>
 
     <!-- about me -->
-    <h3>O mnie</h3>
+    <h3><a href="{{ site.link }}/o-mnie">O mnie</a></h3>
 
     <!-- categories -->
     <section>
 
-        <h3>Kategorie</h3>
+        <h3><a href="{{ site.link }}/kategorie">Kategorie</a></h3>
 
         {% if categories is not empty %}
             <ul am-list>
@@ -25,7 +25,7 @@
     <!-- favourites -->
     <section>
 
-        <h3>Ulubione</h3>
+        <h3><a href="{{ site.link }}/ulubione">Ulubione</a></h3>
 
         {% if ulubioneMenu.get_items is not empty %}
             <ul am-list>
