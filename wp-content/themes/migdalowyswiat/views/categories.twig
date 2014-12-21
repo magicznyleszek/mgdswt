@@ -1,21 +1,30 @@
 {# categories template #}
 {% extends "base.twig" %}
 
+{% block app_content_attributes %}class="fullWidth"{% endblock %}
+
 {% block content %}
 
-    categories
+    {% for category in categories %}
+        <section am-text="centered">
 
-    <ul class="cat-list">
-    {% for cat in categories %}
-    <li><a href="{{cat.link}}">{{cat.name}}</a></li>
-    {% if cat.children %}
-    <ul class="cat-list-children">
-    {% for child in cat.children %}
-    <li><a href="{{child.link}}">{{child.name}}</a></li>
+            <header am-box="enclosed">
+                <h2><a href="{{ category.link }}">{{ category.name }}</a></h2>
+            </header>
+
+            <section>
+
+                {% for post in category.get_posts('numberposts=8') %}
+                    {% include "partials/content-post-listed.twig" %}
+                {% endfor %}
+
+            </section>
+
+        </section>
     {% endfor %}
-    </ul>
-    {% endif %}
-    {% endfor %}
-    </ul>
 
 {% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block base_footer %}{% endblock %}

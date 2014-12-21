@@ -1,3 +1,4 @@
+{# content post template #}
 <article>
 
     {% block post_header %}
@@ -10,7 +11,7 @@
 
                     <span am-box="inline">{{ post.post_date|date }}</span>
 
-                    {% if post.terms('categories').length > 0 %}
+                    {% if post.terms('categories') is not empty %}
                         <ul am-list="inline spacedHLittle">
                             {% for term in post.terms('categories') %}
                                 <li><a href="{{ term.link }}">{{term.name}}</a></li>

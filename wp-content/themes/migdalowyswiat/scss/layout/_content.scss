@@ -5,15 +5,16 @@
 }
 
 #appContent {
-    @include column(5,6);
+    &:not(.fullWidth) {
+        @include column(5,6);
+    }
+    &.fullWidth {
+        padding-left: 0;
+        padding-right: 0;
+    }
     > article:not(:last-of-type) {
         margin-bottom: rem($space-giant);
     }
-}
-
-#appSidebar {
-    font-size: rem(12px);
-    @include column(1,6);
 }
 
 .post-social {

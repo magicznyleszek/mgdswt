@@ -3,6 +3,10 @@
 
 {% block content %}
 
-    category
+    <h2>{{ term.name }}</h2>
+
+    {% for post in term.get_posts %}
+        {% include "partials/content-post-listed"%}
+    {% endfor %}
 
 {% endblock %}

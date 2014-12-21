@@ -26,5 +26,6 @@
 
 // colors
 [am-text~="dimmed"] { @include opacity($f-big); }
+[am-text~="nero"] { color: $c-nero; }
 [am-text~="silver"] { color: $c-silver; }
 [am-text~="silverLight"] { color: $c-silverLight; }

@@ -1,8 +1,20 @@
 {# archives template #}
 {% extends "base.twig" %}
 
+{% block app_content_attributes %}class="fullWidth"{% endblock %}
+
 {% block content %}
 
-    archives
+    <article>
+
+        <header am-box="enclosed" am-text="centered">
+            <h2><a href="http://localhost:8888/migdalowyswiat/archiwum/">Archiwum</a></h2>
+        </header>
+        
+    </article>
 
 {% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block base_footer %}{% endblock %}

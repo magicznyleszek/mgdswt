@@ -1,0 +1,26 @@
+{# content post listed template #}
+<article am-postSquare>
+
+    <figure am-postSquare-bg style="background-image: url('{{ post.thumbnail.src('thumbnail') }}')"></figure>
+
+    <a href="{{ post.link }}">
+
+        <span am-postSquare-title>{{ post.post_title }}</span>
+
+        <span am-postSquare-meta>
+
+            <span am-box="inline">{{ post.post_date|date }}</span>
+
+            {% if post.terms('categories') is not empty %}
+                <ul am-list="inline spacedHLittle">
+                    {% for term in post.terms('categories') %}
+                        <li>{{term.name}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+        </span>
+
+    </a>
+
+</article>

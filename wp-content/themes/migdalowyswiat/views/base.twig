@@ -8,13 +8,15 @@
 
     <div id="appContentWrapper">
 
-        <section id="appContent" role="main" am-box="paddedH">
+        <section id="appContent" role="main" am-box="paddedH" {% block app_content_attributes %}{% endblock %}>
 
             {% block content %}{% endblock %}
 
         </section>
 
-        {% include "partials/sidebar.twig" %}
+        {% block sidebar %}
+            {% include "partials/sidebar.twig" %}
+        {% endblock %}
 
     </div>
 

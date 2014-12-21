@@ -1,2 +1,18 @@
-{# content page template #}
+{# content page favourites template #}
 {% extends "partials/content-post.twig" %}
+
+{% block post_header_meta %}{% endblock %}
+
+{% block post_content %}
+
+    {% if ulubioneMenu.get_items is not empty %}
+        <ul am-list am-text="centered">
+            {% for item in ulubioneMenu.get_items %}
+
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}

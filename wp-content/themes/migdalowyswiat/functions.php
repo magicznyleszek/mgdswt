@@ -59,7 +59,7 @@ add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
 // }
 
 // Add thumbnails support
-add_theme_support('post-thumbnails', array('post'));
+add_theme_support('post-thumbnails');
 
 @include('timberContext.php');
 
