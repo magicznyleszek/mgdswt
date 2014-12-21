@@ -209,7 +209,7 @@ h2 {
   font-family: "Hammersmith One", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
-  margin-top: 3.125rem;
+  margin-top: 1.25rem;
 }
 
 /* line 30, ../scss/base/_typography.scss */
@@ -479,7 +479,7 @@ label:not(:last-child),
 
 /* line 19, ../scss/modules/boxes/_module.scss */
 [am-box~="enclosed"] {
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* line 23, ../scss/modules/boxes/_module.scss */
@@ -563,18 +563,20 @@ label:not(:last-child),
 }
 /* line 42, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"]:not([disabled]):hover {
+  color: inherit;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
   background-color: transparent;
 }
-/* line 46, ../scss/modules/buttons/_module.scss */
+/* line 47, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"]:not([disabled]):active, [am-button~="naked"]:not([disabled]).active {
+  color: inherit;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   background-color: transparent;
 }
 
-/* line 52, ../scss/modules/buttons/_module.scss */
+/* line 54, ../scss/modules/buttons/_module.scss */
 [am-button~="hidden"] {
   visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -586,30 +588,30 @@ label:not(:last-child),
   position: absolute;
 }
 
-/* line 60, ../scss/modules/buttons/_module.scss */
+/* line 62, ../scss/modules/buttons/_module.scss */
 [am-button~="spaceless"] {
   padding: 0 !important;
 }
 
-/* line 64, ../scss/modules/buttons/_module.scss */
+/* line 66, ../scss/modules/buttons/_module.scss */
 [am-button~="spacelessH"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 69, ../scss/modules/buttons/_module.scss */
+/* line 71, ../scss/modules/buttons/_module.scss */
 [am-button~="wide"] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
 
-/* line 74, ../scss/modules/buttons/_module.scss */
+/* line 76, ../scss/modules/buttons/_module.scss */
 [am-button~="small"] {
   font-size: 75%;
   padding: 0.5625rem 0.625rem 0.4375rem;
 }
 
-/* line 79, ../scss/modules/buttons/_module.scss */
+/* line 81, ../scss/modules/buttons/_module.scss */
 [am-button~="full"] {
   width: 100%;
   text-align: left;
@@ -1766,35 +1768,30 @@ label:not(:last-child),
 /* line 9, ../scss/modules/icons/_module.scss */
 [am-icon] {
   display: inline-block;
-  vertical-align: middle;
-  height: 1.25rem;
-  width: 1.25rem;
-  fill: currentColor;
-  shape-rendering: geometricPrecision;
-  color: inherit;
+  vertical-align: bottom;
 }
 
-/* line 19, ../scss/modules/icons/_module.scss */
+/* line 20, ../scss/modules/icons/_module.scss */
 [am-icon~="lefted"] {
   float: left;
   margin-left: 0;
   margin-right: 10px;
 }
 
-/* line 25, ../scss/modules/icons/_module.scss */
+/* line 26, ../scss/modules/icons/_module.scss */
 [am-icon~="righted"] {
   float: right;
   margin-right: 0;
   margin-left: 10px;
 }
 
-/* line 31, ../scss/modules/icons/_module.scss */
+/* line 32, ../scss/modules/icons/_module.scss */
 [am-icon~="big"] {
   width: 2rem;
   height: 2rem;
 }
 
-/* line 36, ../scss/modules/icons/_module.scss */
+/* line 37, ../scss/modules/icons/_module.scss */
 [am-icon~="small"] {
   height: 0.625rem;
   width: 0.625rem;
@@ -2151,7 +2148,7 @@ label:not(:last-child),
   width: 100%;
   color: black;
   background-color: white;
-  padding: 1.25rem;
+  padding-bottom: 2.5rem;
 }
 
 /* line 5, ../scss/layout/_header.scss */
@@ -2220,8 +2217,12 @@ label:not(:last-child),
   vertical-align: top;
   width: 83.33333%;
 }
+/* line 9, ../scss/layout/_content.scss */
+#appContent > article:not(:last-of-type) {
+  margin-bottom: 2.5rem;
+}
 
-/* line 11, ../scss/layout/_content.scss */
+/* line 14, ../scss/layout/_content.scss */
 #appSidebar {
   font-size: 0.75rem;
   -moz-box-sizing: border-box;
@@ -2232,7 +2233,7 @@ label:not(:last-child),
   width: 16.66667%;
 }
 
-/* line 17, ../scss/layout/_content.scss */
+/* line 20, ../scss/layout/_content.scss */
 .post-social hr {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2242,7 +2243,7 @@ label:not(:last-child),
   width: 40%;
   vertical-align: middle;
 }
-/* line 21, ../scss/layout/_content.scss */
+/* line 24, ../scss/layout/_content.scss */
 .post-social nav {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2251,6 +2252,12 @@ label:not(:last-child),
   vertical-align: top;
   width: 20%;
   vertical-align: middle;
+}
+
+/* line 30, ../scss/layout/_content.scss */
+#pagination {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 /* line 1, ../scss/layout/_footer.scss */

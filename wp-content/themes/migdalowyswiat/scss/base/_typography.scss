@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: rem(48px);
 }
 
 h2 {
@@ -24,7 +24,7 @@ h2 {
     font-family: $family-hammersmithOne;
     text-transform: uppercase;
     letter-spacing: rem(1px);
-    margin-top: rem(50px);
+    margin-top: rem($space-large);
 }
 
 h3 {

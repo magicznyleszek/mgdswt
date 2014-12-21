@@ -6,6 +6,9 @@
 
 #appContent {
     @include column(5,6);
+    > article:not(:last-of-type) {
+        margin-bottom: rem($space-giant);
+    }
 }
 
 #appSidebar {
@@ -22,4 +25,9 @@
         @include column(1,5);
         vertical-align: middle;
     }
+}
+
+#pagination {
+    padding-top: rem($space-giant);
+    padding-bottom: rem($space-giant);
 }

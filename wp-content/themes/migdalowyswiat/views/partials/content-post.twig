@@ -1,51 +1,79 @@
 <article>
 
-    <!-- post header -->
-    <header am-box="enclosed" am-text="centered">
+    {% block post_header %}
+        <header am-box="enclosed" am-text="centered">
 
-        <h2><a href="{{ post.link }}">{{ post.post_title }}</a></h2>
+            <h2><a href="{{ post.link }}">{{ post.post_title }}</a></h2>
 
-        <!-- post meta -->
-        <div am-text="silver uppercased spacedBig">
+            {% block post_header_meta %}
+                <div am-text="silver uppercased spacedBig">
 
-            <span am-box="inline">{{ post.post_date|date }}</span>
+                    <span am-box="inline">{{ post.post_date|date }}</span>
 
-            <ul am-list="inline spacedHLittle">
-                {% for term in post.terms('categories') %}
-                    <li><a href="{{ term.link }}">{{term.name}}</a></li>
-                {% endfor %}
-            </ul>
+                    {% if post.terms('categories').length > 0 %}
+                        <ul am-list="inline spacedHLittle">
+                            {% for term in post.terms('categories') %}
+                                <li><a href="{{ term.link }}">{{term.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
 
-        </div>
+                </div>
+            {% endblock %}
 
-    </header>
+        </header>
+    {% endblock %}
 
-    <!-- post excerpt -->
-    <section>
-        {{ post.get_preview(200, false, '&rarr;', false) }}
-    </section>
+    {% block post_content %}
+        <section>
+            {{ post.content }}
+        </section>
+    {% endblock %}
 
-    <!-- post social -->
-    <footer class="post-social">
+    {% block post_comments %}
+        {% if post.comment_status != "closed" %}
+            <section>
+                Comments
+            </section>
+        {% endif %}
+    {% endblock %}
 
-        <hr am-line="inline">
+    {% block post_social %}
+        <footer class="post-social">
 
-        <nav am-box am-text="centered">
-            <ul am-list="inline spacedHLittle">
-                {% for item in socialMenu %}
+            <hr am-line="inline">
 
+            <nav am-box am-text="centered">
+                <ul am-list="inline spacedHLittle">
+
+                    <!-- Facebook -->
                     <li>
-                        <a href="{{ item.url }}" am-button="naked spaceless" target="_blank">
-                            <img src="{{ theme.link }}/img/icons/{{ item.icon }}.png" alt="{{ item.title }}">
+                        <a href="http://www.facebook.com/sharer.php?u={{ post.link }}" am-button="naked spaceless" target="_blank">
+                            <img src="{{ theme.link }}/img/icons/facebook-gray-o.png" alt="Facebook">
                         </a>
                     </li>
 
-                {% endfor %}
-            </ul>
-        </nav>
+                    <!-- Pinterest -->
+                    <li>
+                        <a href="http://pinterest.com/pin/create/link/?url={{ post.link }}" am-button="naked spaceless" target="_blank">
+                            <img src="{{ theme.link }}/img/icons/pinterest-gray-o.png" alt="Pinterest">
+                        </a>
+                    </li>
 
-        <hr am-line="inline">
+                    <!-- Email -->
+                    <li>
+                        <a href="mailto:?Subject={{ site.title }}&Body={{ post.link }}" am-button="naked spaceless" target="_blank">
+                            <img src="{{ theme.link }}/img/icons/envelope-gray-o.png" alt="Mail">
+                        </a>
+                    </li>
 
-    </footer>
+
+                </ul>
+            </nav>
+
+            <hr am-line="inline">
+
+        </footer>
+    {% endblock %}
 
 </article>

@@ -2,7 +2,9 @@
 
     {% include "partials/html-head.twig" %}
 
-    {% include "partials/header.twig" %}
+    {% block base_header %}
+        {% include "partials/header.twig" %}
+    {% endblock %}
 
     <div id="appContentWrapper">
 
@@ -16,7 +18,9 @@
 
     </div>
 
-    {% include "partials/footer.twig" %}
+    {% block base_footer %}
+        {% include "partials/footer.twig" %}
+    {% endblock %}
 
     {% include "partials/html-end.twig" %}
 

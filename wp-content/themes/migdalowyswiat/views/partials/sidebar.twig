@@ -6,6 +6,18 @@
 
     <h3>Kategorie</h3>
 
-    <h3>Ulubione</h3>
+    <section>
+        <h3>Ulubione</h3>
+
+        {% if ulubioneMenu.get_items is not empty %}
+            <ul am-list>
+                {% for item in ulubioneMenu.get_items %}
+
+                    <li><a href="{{item.url}}">{{ item.title }}</a></li>
+
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
 
 </aside>

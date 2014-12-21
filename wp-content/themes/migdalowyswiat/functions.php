@@ -58,6 +58,8 @@ add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
 //     do_action('after_slug', $slug);
 // }
 
+// Add thumbnails support
+add_theme_support('post-thumbnails', array('post'));
 
 @include('timberContext.php');
 

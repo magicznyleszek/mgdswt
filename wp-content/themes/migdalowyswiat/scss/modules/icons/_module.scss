@@ -8,12 +8,13 @@
 
 [am-icon] {
     display: inline-block;
-    vertical-align: middle;
-    height: rem($w-large);
-    width: rem($w-large);
-    fill: currentColor;
-    shape-rendering: geometricPrecision;
-    color: inherit;
+    // vertical-align: middle;
+    vertical-align: bottom;
+    // height: rem($w-large);
+    // width: rem($w-large);
+    // fill: currentColor;
+    // shape-rendering: geometricPrecision;
+    // color: inherit;
 }
 
 [am-icon~="lefted"] {

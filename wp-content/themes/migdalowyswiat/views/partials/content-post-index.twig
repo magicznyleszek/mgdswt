@@ -1,0 +1,10 @@
+{# content page template #}
+{% extends "partials/content-post.twig" %}
+
+{% block post_content %}
+    <section>
+        {{ post.get_preview(200, false, '', true) }}
+    </section>
+{% endblock %}
+
+{% block post_comments %}{% endblock %}

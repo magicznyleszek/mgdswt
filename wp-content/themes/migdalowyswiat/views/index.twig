@@ -4,7 +4,7 @@
 {% block content %}
 
     {% for post in posts %}
-        {% include "partials/content-post.twig" %}
+        {% include "partials/content-post-index.twig" %}
     {% endfor %}
 
     {#
@@ -12,5 +12,7 @@
         {{ posts|print_r }}
     </pre>
     #}
+
+    {% include "partials/pagination.twig" %}
 
 {% endblock %}

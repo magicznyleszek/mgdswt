@@ -40,10 +40,12 @@
     background-color: transparent;
     font-weight: inherit;
     &:not([disabled]):hover {
+        color: inherit;
         @include opacity(0.75);
         background-color: transparent;
     }
     &:not([disabled]):active, &:not([disabled]).active {
+        color: inherit;
         @include opacity(0.5);
         background-color: transparent;
     }
