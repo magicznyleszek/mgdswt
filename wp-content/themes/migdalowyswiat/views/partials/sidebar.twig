@@ -6,12 +6,25 @@
 
         <h3>Newsletter</h3>
 
+        <div id="appMenuSearch" am-box="paddedH">
+            <form id="searchform" method="get" action="{{ site.url }}/index.php">
+                <input am-textBox type="text" name="s" id="s" value="" placeholder="Wyszukaj na blogu">
+                <input am-button="hidden" type="submit" value="Search">
+            </form>
+        </div>
+
+        <p>Bądź na bieżąco z nowymi wpisami na blogu.</p>
+
     </section>
 
     <!-- about me -->
     <section>
 
         <h3><a href="{{ site.link }}/o-mnie">O mnie</a></h3>
+
+        <p><img src="{{ theme.link }}/img/migdalowyswiat-avatar-165.png"></p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi lobortis, rhoncus metus eget, sagittis diam. Duis a massa in mauris aliquam tristique vitae ac mauris.</p>
 
     </section>
 

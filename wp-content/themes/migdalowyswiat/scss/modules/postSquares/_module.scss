@@ -33,7 +33,7 @@
         display: block;
         width: 100%;
         @include box-sizing(border-box);
-        padding: $space-medium;
+        padding: $space-medium $space-little;
     }
     [am-postSquare-bg] {
         @include absolute(top 0 left 0);
@@ -62,5 +62,10 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         @include transition($d-fast);
+        span {
+            display: inline-block;
+            padding-left: rem($space-tiny);
+            padding-right: rem($space-tiny);
+        }
     }
 }

@@ -1922,7 +1922,7 @@ label:not(:last-child),
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 16px;
+  padding: 16px 8px;
 }
 /* line 38, ../scss/modules/postSquares/_module.scss */
 [am-postSquare] [am-postSquare-bg] {
@@ -1965,6 +1965,12 @@ label:not(:last-child),
   -o-transition: 0.25s;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+}
+/* line 65, ../scss/modules/postSquares/_module.scss */
+[am-postSquare] [am-postSquare-meta] span {
+  display: inline-block;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
 }
 
 /*

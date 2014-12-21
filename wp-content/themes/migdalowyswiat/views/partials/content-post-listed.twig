@@ -9,14 +9,12 @@
 
         <span am-postSquare-meta>
 
-            <span am-box="inline">{{ post.post_date|date }}</span>
+            <span>{{ post.post_date|date }}</span>
 
             {% if post.terms('categories') is not empty %}
-                <ul am-list="inline spacedHLittle">
-                    {% for term in post.terms('categories') %}
-                        <li>{{term.name}}</li>
-                    {% endfor %}
-                </ul>
+                {% for term in post.terms('categories') %}
+                    <span>{{term.name}}</span>
+                {% endfor %}
             {% endif %}
 
         </span>
