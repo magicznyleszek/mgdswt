@@ -3,7 +3,11 @@
 
 {% block post_content %}
     <section>
-        {{ post.get_preview(200, false, '', true) }}
+
+        <p><img src="{{ post.thumbnail.src('big') }}" alt="{{ post.thumbnail.post_title }}" /></p>
+
+        <p>{{ post.get_preview(200, false, '', true) }}</p>
+
     </section>
 {% endblock %}
 

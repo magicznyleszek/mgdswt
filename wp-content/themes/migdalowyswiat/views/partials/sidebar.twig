@@ -1,23 +1,42 @@
 <aside id="appSidebar" am-box="paddedH" am-text="centered">
 
+    <!-- newsletter -->
     <h3>Newsletter</h3>
 
+    <!-- about me -->
     <h3>O mnie</h3>
 
-    <h3>Kategorie</h3>
-
+    <!-- categories -->
     <section>
+
+        <h3>Kategorie</h3>
+
+        {% if categories is not empty %}
+            <ul am-list>
+                {% for category in categories %}
+
+                    <li><a href="{{ category.link }}">{{ category.name }}</a></li>
+
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+
+    <!-- favourites -->
+    <section>
+
         <h3>Ulubione</h3>
 
         {% if ulubioneMenu.get_items is not empty %}
             <ul am-list>
                 {% for item in ulubioneMenu.get_items %}
 
-                    <li><a href="{{item.url}}">{{ item.title }}</a></li>
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
 
                 {% endfor %}
             </ul>
         {% endif %}
+
     </section>
 
 </aside>
