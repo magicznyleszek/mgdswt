@@ -6,12 +6,9 @@
 
         <h3>Newsletter</h3>
 
-        <div id="appMenuSearch" am-box="paddedH">
-            <form id="searchform" method="get" action="{{ site.url }}/index.php">
-                <input am-textBox type="text" name="s" id="s" value="" placeholder="Wyszukaj na blogu">
-                <input am-button="hidden" type="submit" value="Search">
-            </form>
-        </div>
+        {% filter shortcodes %}
+            [wysija_form id="1"]
+        {% endfilter %}
 
         <p>Bądź na bieżąco z nowymi wpisami na blogu.</p>
 
