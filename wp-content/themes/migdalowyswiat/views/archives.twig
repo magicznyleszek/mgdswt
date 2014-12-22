@@ -5,15 +5,38 @@
 
 {% block content %}
 
-    <article>
+    {% set current_date = '' %}
 
-        <header am-box="enclosed" am-text="centered">
-            <h2><a href="http://localhost:8888/migdalowyswiat/archiwum/">Archiwum</a></h2>
-        </header>
+    {% for post in posts %}
 
-        {{ function('wp_get_archives') }}
+        {% set post_date = post.post_date|date("F Y") %}
 
-    </article>
+        {% if current_date != post_date %}
+
+            {# close previous month article (if not first one) #}
+            {% if loop.index0 != 0 %}
+                </article>
+            {% endif %}
+
+            {# open this month article #}
+            <article>
+
+                <header am-box="enclosed" am-text="centered">
+                    <h2>{{ post_date }}</h2>
+                </header>
+
+        {% endif %}
+
+        {% set current_date = post.post_date|date("F Y") %}
+
+        {% include "partials/content-post-listed.twig" %}
+
+        {# close last month article #}
+        {% if loop.last %}
+            </article>
+        {% endif %}
+
+    {% endfor %}
 
 {% endblock %}
 

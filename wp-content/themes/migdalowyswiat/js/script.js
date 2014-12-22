@@ -2,14 +2,15 @@ function projectInterface() {
     // declare a public run function with all private stuff initialized inside of it
     this.run = run;
     function run() {
-        doSomething();
+        disableHoverWhenScrolling();
     }
 
-    // this does something if true
-    function doSomething() {
-        if(true === true) {
-            console.log('Hello world!');
-        }
+    function disableHoverWhenScrolling() {
+        $(window).on('scrollstart', function () {
+            $('#app').css('pointer-events', 'none');
+        }).on('scrollstop', function () {
+            $('#app').prop('style').removeProperty('pointer-events');
+        });
     }
 }
 

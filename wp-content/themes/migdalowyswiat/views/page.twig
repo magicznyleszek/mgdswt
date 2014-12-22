@@ -1,10 +1,14 @@
 {# page template #}
 {% extends "base.twig" %}
 
+{% block app_content_attributes %}class="fullWidth"{% endblock %}
+
 {% block content %}
 
     {% include "partials/content-page.twig" %}
 
 {% endblock %}
+
+{% block sidebar %}{% endblock %}
 
 {% block base_footer %}{% endblock %}

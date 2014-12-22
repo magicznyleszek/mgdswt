@@ -5,17 +5,21 @@
 
     <a href="{{ post.link }}">
 
-        <span am-postSquare-title>{{ post.post_title }}</span>
+        <span am-postSquare-content>
 
-        <span am-postSquare-meta>
+            <span am-postSquare-title>{{ post.post_title }}</span>
 
-            <span>{{ post.post_date|date }}</span>
+            <span am-postSquare-meta>
 
-            {% if post.terms('categories') is not empty %}
-                {% for term in post.terms('categories') %}
-                    <span>{{term.name}}</span>
-                {% endfor %}
-            {% endif %}
+                <span>{{ post.post_date|date }}</span>
+
+                {% if post.terms('categories') is not empty %}
+                    {% for term in post.terms('categories') %}
+                        <span>{{term.name}}</span>
+                    {% endfor %}
+                {% endif %}
+
+            </span>
 
         </span>
 

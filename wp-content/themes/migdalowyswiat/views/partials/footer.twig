@@ -1,10 +1,24 @@
 {# footer template #}
 <footer id="appFooter" am-box="paddedH" am-text="centered">
 
-    {% if pagination %}
-        <hr am-line>
-    {% endif %}
+    <section am-box="wrapper">
+        {% if pagination %}
+            <hr am-line>
+        {% endif %}
+    </section>
 
-    <h2>Sugerowane</h2>
+    <header am-box="enclosed" am-text="centered">
+
+        <h2>Sugerowane</h2>
+
+    </header>
+
+    {% if suggested_posts %}
+        {% for post in suggested_posts %}
+            {% include "partials/content-post-listed.twig" %}
+        {% endfor %}
+    {% else %}
+        <em>Brak propozycji.</em>
+    {% endif %}
 
 </footer>

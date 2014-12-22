@@ -1,12 +1,20 @@
-{# categories template #}
+{# category template #}
 {% extends "base.twig" %}
+
+{% block app_content_attributes %}class="fullWidth"{% endblock %}
 
 {% block content %}
 
-    <h2>{{ term.name }}</h2>
+    <header am-text="centered" am-box="enclosed">
+        <h2><a href="{{ current_category_link }}">{{ current_category.name }}</a></h2>
+    </header>
 
-    {% for post in term.get_posts %}
-        {% include "partials/content-post-listed"%}
+    {% for post in posts %}
+        {% include "partials/content-post-listed.twig" %}
     {% endfor %}
 
 {% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block base_footer %}{% endblock %}
