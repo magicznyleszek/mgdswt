@@ -2,13 +2,11 @@
 <aside id="appSidebar" am-box="paddedH" am-text="centered">
 
     <!-- newsletter -->
-    <section>
+    <section id="sidebarNewsletter">
 
         <h3>Newsletter</h3>
 
-        {% filter shortcodes %}
-            [wysija_form id="1"]
-        {% endfilter %}
+        {% include "partials/newsletter-form.twig" %}
 
         <p>Bądź na bieżąco z nowymi wpisami na blogu.</p>
 

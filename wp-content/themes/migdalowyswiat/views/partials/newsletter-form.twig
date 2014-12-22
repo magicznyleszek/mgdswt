@@ -1,0 +1,30 @@
+<section>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        if (typeof newsletter_check !== "function") {
+            window.newsletter_check = function (f) {
+                var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+                if (!re.test(f.elements["ne"].value)) {
+                    alert("Podany email jest niepoprawny!");
+                    return false;
+                }
+                if (f.elements["ny"] && !f.elements["ny"].checked) {
+                    alert("You must accept the privacy statement");
+                    return false;
+                }
+                return true;
+            }
+        }
+    //]]>
+    </script>
+
+    <form method="post" action="{{ site.url }}/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)">
+
+        <input am-textBox type="email" class="newsletter-email" name="ne" required placeholder="Twój email">
+
+        <input am-button="hidden" class="newsletter-submit" type="submit" value="Zapisz się">
+
+    </form>
+
+</section>
