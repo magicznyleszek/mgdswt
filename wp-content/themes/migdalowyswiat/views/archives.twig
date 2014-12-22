@@ -10,7 +10,9 @@
         <header am-box="enclosed" am-text="centered">
             <h2><a href="http://localhost:8888/migdalowyswiat/archiwum/">Archiwum</a></h2>
         </header>
-        
+
+        {{ function('wp_get_archives') }}
+
     </article>
 
 {% endblock %}
