@@ -24,6 +24,7 @@
     letter-spacing: 1px;
     color: $button-default-txt-c;
     background-color: $button-default-bg-c;
+    cursor: pointer;
     @include box-shadow($button-default-sh);
     @include transition(background-color $d-faster);
     &:not([disabled]):not([am-button~="naked"]):hover {

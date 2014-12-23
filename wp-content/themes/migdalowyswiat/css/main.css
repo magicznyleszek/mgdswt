@@ -542,6 +542,7 @@ label:not(:last-child),
   letter-spacing: 1px;
   color: black;
   background-color: white;
+  cursor: pointer;
   -moz-box-shadow: 0 0 0 2px #ffdf80;
   -webkit-box-shadow: 0 0 0 2px #ffdf80;
   box-shadow: 0 0 0 2px #ffdf80;
@@ -550,20 +551,20 @@ label:not(:last-child),
   -webkit-transition: background-color 0.125s;
   transition: background-color 0.125s;
 }
-/* line 29, ../scss/modules/buttons/_module.scss */
+/* line 30, ../scss/modules/buttons/_module.scss */
 [am-button]:not([disabled]):not([am-button~="naked"]):hover {
   -moz-box-shadow: 0 0 0 3px #ffdf80;
   -webkit-box-shadow: 0 0 0 3px #ffdf80;
   box-shadow: 0 0 0 3px #ffdf80;
 }
-/* line 32, ../scss/modules/buttons/_module.scss */
+/* line 33, ../scss/modules/buttons/_module.scss */
 [am-button]:not([disabled]):not([am-button~="naked"]):active, [am-button]:not([disabled]):not([am-button~="naked"]).active {
   -moz-box-shadow: 0 0 0 3px #ffd557;
   -webkit-box-shadow: 0 0 0 3px #ffd557;
   box-shadow: 0 0 0 3px #ffd557;
 }
 
-/* line 38, ../scss/modules/buttons/_module.scss */
+/* line 39, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"] {
   color: inherit;
   border-radius: 0;
@@ -573,14 +574,14 @@ label:not(:last-child),
   background-color: transparent;
   font-weight: inherit;
 }
-/* line 44, ../scss/modules/buttons/_module.scss */
+/* line 45, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"]:not([disabled]):hover {
   color: inherit;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
   background-color: transparent;
 }
-/* line 49, ../scss/modules/buttons/_module.scss */
+/* line 50, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"]:not([disabled]):active, [am-button~="naked"]:not([disabled]).active {
   color: inherit;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
@@ -588,7 +589,7 @@ label:not(:last-child),
   background-color: transparent;
 }
 
-/* line 56, ../scss/modules/buttons/_module.scss */
+/* line 57, ../scss/modules/buttons/_module.scss */
 [am-button~="hidden"] {
   visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -600,30 +601,30 @@ label:not(:last-child),
   position: absolute;
 }
 
-/* line 64, ../scss/modules/buttons/_module.scss */
+/* line 65, ../scss/modules/buttons/_module.scss */
 [am-button~="spaceless"] {
   padding: 0 !important;
 }
 
-/* line 68, ../scss/modules/buttons/_module.scss */
+/* line 69, ../scss/modules/buttons/_module.scss */
 [am-button~="spacelessH"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 73, ../scss/modules/buttons/_module.scss */
+/* line 74, ../scss/modules/buttons/_module.scss */
 [am-button~="wide"] {
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
-/* line 78, ../scss/modules/buttons/_module.scss */
+/* line 79, ../scss/modules/buttons/_module.scss */
 [am-button~="small"] {
   font-size: 75%;
   padding: 0.5625rem 0.625rem 0.4375rem;
 }
 
-/* line 83, ../scss/modules/buttons/_module.scss */
+/* line 84, ../scss/modules/buttons/_module.scss */
 [am-button~="full"] {
   width: 100%;
   text-align: left;
