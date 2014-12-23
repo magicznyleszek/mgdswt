@@ -11,4 +11,8 @@
     </section>
 {% endblock %}
 
-{% block post_comments %}{% endblock %}
+{% block post_comments %}
+    <section am-text="silver uppercased spaced centered">
+        <a href="{{ post.link }}#commentForm">komentarze {{ post.comment_count }}</a>
+    </section>
+{% endblock %}

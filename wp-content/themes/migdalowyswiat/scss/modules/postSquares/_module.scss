@@ -60,6 +60,7 @@
             font-size: rem(12px);
             letter-spacing: 2px;
             text-transform: uppercase;
+            margin-top: $rootLineHeight * 1rem;
             span {
                 display: inline-block;
                 padding-left: rem($space-tiny);

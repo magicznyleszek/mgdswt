@@ -14,8 +14,9 @@
     margin: 0;
     border: 0;
     outline: 0;
-    padding: rem($space-medium + 1px) rem($space-medium) rem($space-medium - 1px);
-    line-height: 1;
+    padding: rem($space-small + 1px) rem($space-small) rem($space-small + 1px);
+    font-size: 1rem;
+    line-height: $rootLineHeight * 1rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
@@ -25,11 +26,12 @@
     background-color: $button-default-bg-c;
     @include box-shadow($button-default-sh);
     @include transition(background-color $d-faster);
-    &:not([disabled]):hover {
-        background-color: $button-default-bg-hover-c;
+    &:not([disabled]):not([am-button~="naked"]):hover {
+        @include box-shadow($button-default-hover-sh);
     }
-    &:not([disabled]):active, &:not([disabled]).active {
-        background-color: $button-default-bg-active-c;
+    &:not([disabled]):not([am-button~="naked"]):active,
+    &:not([disabled]):not([am-button~="naked"]).active {
+        @include box-shadow($button-default-active-sh);
     }
 }
 
@@ -69,8 +71,8 @@
 }
 
 [am-button~="wide"] {
-    padding-left: rem($space-giant);
-    padding-right: rem($space-giant);
+    padding-left: rem($space-colossal);
+    padding-right: rem($space-colossal);
 }
 
 [am-button~="small"] {

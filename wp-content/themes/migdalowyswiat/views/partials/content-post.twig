@@ -33,8 +33,17 @@
 
     {% block post_comments %}
         {% if post.comment_status != "closed" %}
+            {% include "partials/comment-form.twig" with {'form_post_id': post.ID, 'form_comment_count': post.comment_count } %}
             <section>
-                Comments
+                {% if post.comment_count > 0 %}
+                    {% for comment in post.comments %}
+                        {% include "partials/content-comment.twig" with {'commentIndex': loop.index} %}
+                    {% endfor %}
+                {% else %}
+                    <article class="post-comment" am-text="centered">
+                        <p>Brak komentarzy.</p>
+                    </article>
+                {% endif %}
             </section>
         {% endif %}
     {% endblock %}

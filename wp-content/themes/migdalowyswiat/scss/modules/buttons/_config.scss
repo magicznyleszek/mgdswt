@@ -2,7 +2,7 @@
 
 // default
 $button-default-txt-c: $c-black;
-$button-default-bg-c: $c-silver;
-$button-default-sh: 0 2px 0 0 $c-silverDark;
-$button-default-bg-hover-c: $c-silverLight;
-$button-default-bg-active-c: $c-silverLighter;
+$button-default-bg-c: $c-white;
+$button-default-sh: 0 0 0 2px $c-salomie;
+$button-default-hover-sh: 0 0 0 3px $c-salomie;
+$button-default-active-sh: 0 0 0 3px $c-salomieDark;

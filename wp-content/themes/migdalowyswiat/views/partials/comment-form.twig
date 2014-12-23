@@ -1,0 +1,21 @@
+<form id="commentForm" action="{{ site.url }}/wp-comments-post.php" method="post">
+
+    <section>
+        <textarea am-textBox="special" id="comment" placeholder="Wpisz komentarz" name="comment" cols="40" rows="5"></textarea>
+    </section>
+
+    <section am-flexContainer="horizontal centered">
+
+        <div am-flexItem>
+            <input am-textBox="special" id="author" name="author" type="text" placeholder="Imię" value="">
+            <input am-button="wide" name="submit" type="submit" id="submit-comment" value="Wyślij">
+        </div>
+
+        <div am-box="paddedH" am-text="silver uppercased spaced">komentarze {{ form_comment_count }}</div>
+
+    </section>
+
+    <input type="hidden" name="comment_post_ID" value="{{ form_post_id }}" id="comment_post_ID">
+    <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+
+</form>

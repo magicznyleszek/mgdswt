@@ -28,6 +28,19 @@
     }
 }
 
+.post-comment {
+    padding-bottom: rem($space-big);
+}
+
+#commentForm {
+    padding-top: rem($space-giant);
+    padding-bottom: rem($space-giant);
+    input#author {
+        max-width: rem(320px);
+        margin-right: rem($space-big);
+    }
+}
+
 #pagination {
     padding-top: rem($space-giant);
     padding-bottom: rem($space-giant);
