@@ -1,6 +1,8 @@
 #appSidebar {
     font-size: rem(12px);
-    @include column(1,6);
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        @include column(1,6);
+    }
     > section {
         padding-top: rem($space-large);
     }

@@ -5,8 +5,10 @@
 }
 
 #appContent {
-    &:not(.fullWidth) {
-        @include column(5,6);
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        &:not(.fullWidth) {
+            @include column(5,6);
+        }
     }
     &.fullWidth {
         padding-left: 0;

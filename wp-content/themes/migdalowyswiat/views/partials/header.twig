@@ -1,9 +1,18 @@
 {# header template #}
 <header id="appHeader">
 
-    <section id="appMenu" am-box="ruled">
+    <section id="appMenu">
 
-        <div am-box="wrapper">
+        <!-- mobile menu toggle -->
+        <a am-button="naked" id="appMenuOpener" href="#appMenu">
+            <img src="{{ theme.link }}/img/icons/menu-burger.png" alt="=">
+        </a>
+        
+        <a am-button="naked" id="appMenuCloser" href="#closeAppMenu">
+            <img src="{{ theme.link }}/img/icons/menu-close.png" alt="x">
+        </a>
+
+        <div id="appMenuWrapper" am-box="wrapper">
 
             <!-- pages nav -->
             {% if glowneMenu.get_items is not empty %}

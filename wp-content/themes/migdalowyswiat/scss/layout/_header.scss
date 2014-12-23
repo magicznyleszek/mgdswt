@@ -3,24 +3,103 @@
 }
 
 #appMenu {
-    z-index: $z-9;
+    z-index: $z-7;
     @include fixed(top 0 left 0);
     width: 100%;
-    border-bottom: 1px solid $c-salomie;
     background-color: $appMenu-bg-c;
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        border-bottom: 1px solid $c-salomie;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        max-height: 100%;
+        text-align: center;
+        background-color: transparent;
+        &:target {
+            #appMenuCloser {
+                display: block;
+            }
+            #appMenuOpener {
+                display: none;
+            }
+            #appMenuWrapper {
+                @include opacity(1);
+                visibility: visible;
+            }
+        }
+        &:not(:target) {
+            #appMenuCloser {
+                display: none;
+            }
+            #appMenuOpener {
+                display: block;
+            }
+            #appMenuWrapper {
+                @include opacity(0);
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+#appMenuWrapper {
+    @media screen and (max-width: #{$break-smaller}) {
+        @include fixed(top 0 left 0);
+        z-index: $z-8;
+        width: 100%;
+        max-height: 100%;
+        @include transition($d-slow);
+        overflow: auto;
+        background-color: $appMenu-bg-c;
+    }
+}
+
+#appMenuOpener,
+#appMenuCloser {
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        display: none;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        > img {
+            @include opacity(0.2);
+        }
+        @include absolute(top $space-medium right $space-medium);
+        z-index: $z-9;
+    }
 }
 
 #appMenuPages {
-    @include column(7,12);
-    vertical-align: middle;
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        @include column(7,12);
+        vertical-align: middle;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        @include column(9,12);
+        [am-list] > li {
+            @include column();
+            font-size: 2rem;
+        }
+    }
 }
 #appMenuSearch {
-    @include column(3,12);
-    vertical-align: middle;
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        @include column(3,12);
+        vertical-align: middle;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        @include column(9,12);
+        padding: $space-small;
+    }
 }
 #appMenuSocial {
-    @include column(2,12);
-    vertical-align: middle;
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        @include column(2,12);
+        vertical-align: middle;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        @include column(9,12);
+        padding: $space-small;
+    }
 }
 
 #appBanner {
