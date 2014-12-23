@@ -1,0 +1,20 @@
+{# search template #}
+{% extends "base.twig" %}
+
+{% block app_content_attributes %}class="fullWidth"{% endblock %}
+
+{% block content %}
+
+    <header am-text="centered" am-box="enclosed">
+        <h2>{{ title }}</h2>
+    </header>
+
+    {% for post in posts %}
+        {% include "partials/content-post-listed.twig" %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block base_footer %}{% endblock %}
