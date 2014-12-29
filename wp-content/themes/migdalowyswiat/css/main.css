@@ -1741,15 +1741,18 @@ label:not(:last-child),
 */
 /* line 10, ../scss/modules/flexes/_module.scss */
 [am-flexContainer] {
+  display: -webkit-flex;
   display: flex;
 }
 /* line 12, ../scss/modules/flexes/_module.scss */
 [am-flexContainer] [am-flexItem] {
+  -webkit-flex: 1;
   flex: 1;
 }
 
 /* line 18, ../scss/modules/flexes/_module.scss */
 [am-flexContainer~="vertical"] {
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 /* line 20, ../scss/modules/flexes/_module.scss */
@@ -1759,6 +1762,7 @@ label:not(:last-child),
 
 /* line 25, ../scss/modules/flexes/_module.scss */
 [am-flexContainer~="horizontal"] {
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
 /* line 27, ../scss/modules/flexes/_module.scss */
@@ -1768,10 +1772,12 @@ label:not(:last-child),
 
 /* line 32, ../scss/modules/flexes/_module.scss */
 [am-flexContainer~="centered"] {
+  -webkit-align-items: center;
   align-items: center;
 }
 /* line 34, ../scss/modules/flexes/_module.scss */
 [am-flexContainer~="centered"] [am-flexItem] {
+  -webkit-align-self: center;
   align-self: center;
 }
 

@@ -8,30 +8,30 @@
 */
 
 [am-flexContainer] {
-    display: flex;
+    @include display-flex;
     [am-flexItem] {
-        flex: 1;
+        @include flex(1);
     }
 
 }
 
 [am-flexContainer~="vertical"] {
-    flex-direction: column;
+    @include flex-direction(column);
     &[am-flexContainer~="full"] {
         width: 100%;
     }
 }
 
 [am-flexContainer~="horizontal"] {
-    flex-direction: row;
+    @include flex-direction(row);
     &[am-flexContainer~="full"] {
         height: 100%;
     }
 }
 
 [am-flexContainer~="centered"] {
-    align-items: center;
+    @include align-items(center);
     [am-flexItem] {
-        align-self: center;
+        @include align-self(center);
     }
 }
