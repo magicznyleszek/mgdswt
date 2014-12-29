@@ -6,18 +6,16 @@
 {% block content %}
 
     {% for category in categories %}
-        <section am-text="centered">
+        <section>
 
-            <header am-box="enclosed">
+            <header am-text="centered" am-box="enclosed">
                 <h2><a href="{{ category.link }}">{{ category.name }}</a></h2>
             </header>
 
             <section>
-
                 {% for post in category.get_posts('numberposts=8') %}
                     {% include "partials/content-post-listed.twig" %}
                 {% endfor %}
-
             </section>
 
         </section>
