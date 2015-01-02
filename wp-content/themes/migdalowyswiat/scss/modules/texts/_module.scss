@@ -4,6 +4,8 @@
     <p am-text="uppercased centered">UPPERCASED CENTERED</p>
 */
 
+[am-text~="small"] { font-size: $p-giant; }
+
 // weights
 [am-text~="300"] { font-weight: 300; }
 [am-text~="400"] { font-weight: 400; }

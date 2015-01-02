@@ -2214,80 +2214,85 @@ label:not(:last-child),
 /*
     <p am-text="uppercased centered">UPPERCASED CENTERED</p>
 */
-/* line 8, ../scss/modules/texts/_module.scss */
+/* line 7, ../scss/modules/texts/_module.scss */
+[am-text~="small"] {
+  font-size: 75%;
+}
+
+/* line 10, ../scss/modules/texts/_module.scss */
 [am-text~="300"] {
   font-weight: 300;
 }
 
-/* line 9, ../scss/modules/texts/_module.scss */
+/* line 11, ../scss/modules/texts/_module.scss */
 [am-text~="400"] {
   font-weight: 400;
 }
 
-/* line 10, ../scss/modules/texts/_module.scss */
+/* line 12, ../scss/modules/texts/_module.scss */
 [am-text~="600"] {
   font-weight: 600;
 }
 
-/* line 13, ../scss/modules/texts/_module.scss */
+/* line 15, ../scss/modules/texts/_module.scss */
 [am-text~="lefted"] {
   text-align: left;
 }
 
-/* line 14, ../scss/modules/texts/_module.scss */
+/* line 16, ../scss/modules/texts/_module.scss */
 [am-text~="righted"] {
   text-align: right;
 }
 
-/* line 15, ../scss/modules/texts/_module.scss */
+/* line 17, ../scss/modules/texts/_module.scss */
 [am-text~="centered"] {
   text-align: center;
 }
 
-/* line 18, ../scss/modules/texts/_module.scss */
+/* line 20, ../scss/modules/texts/_module.scss */
 [am-text~="uppercased"] {
   text-transform: uppercase;
 }
 
-/* line 19, ../scss/modules/texts/_module.scss */
+/* line 21, ../scss/modules/texts/_module.scss */
 [am-text~="untransformed"] {
   text-transform: none;
 }
 
-/* line 22, ../scss/modules/texts/_module.scss */
+/* line 24, ../scss/modules/texts/_module.scss */
 [am-text~="spaced"] {
   letter-spacing: 0.0625rem;
 }
 
-/* line 23, ../scss/modules/texts/_module.scss */
+/* line 25, ../scss/modules/texts/_module.scss */
 [am-text~="spacedBig"] {
   letter-spacing: 0.125rem;
 }
 
-/* line 26, ../scss/modules/texts/_module.scss */
+/* line 28, ../scss/modules/texts/_module.scss */
 [am-text~="trimmed"] {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-/* line 33, ../scss/modules/texts/_module.scss */
+/* line 35, ../scss/modules/texts/_module.scss */
 [am-text~="dimmed"] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
-/* line 34, ../scss/modules/texts/_module.scss */
+/* line 36, ../scss/modules/texts/_module.scss */
 [am-text~="nero"] {
   color: #262626;
 }
 
-/* line 35, ../scss/modules/texts/_module.scss */
+/* line 37, ../scss/modules/texts/_module.scss */
 [am-text~="silver"] {
   color: gray;
 }
 
-/* line 36, ../scss/modules/texts/_module.scss */
+/* line 38, ../scss/modules/texts/_module.scss */
 [am-text~="silverLight"] {
   color: #949494;
 }

@@ -7,14 +7,14 @@
             <h2><a href="{{ post.link }}">{{ post.post_title }}</a></h2>
 
             {% block post_header_meta %}
-                <div am-text="300 silver uppercased spacedBig">
+                <div am-text="300 silver uppercased spacedBig small">
 
-                    <small am-box="inline">{{ post.post_date|date }}</small>
+                    <span am-box="inline">{{ post.post_date|date }}</span>
 
                     {% if post.terms('categories') is not empty %}
                         <ul am-list="inline spacedHLittle">
                             {% for term in post.terms('categories') %}
-                                <li><a href="{{ term.link }}"><small>{{term.name}}</small></a></li>
+                                <li><a href="{{ term.link }}">{{term.name}}</a></li>
                             {% endfor %}
                         </ul>
                     {% endif %}
