@@ -2,7 +2,7 @@
 {% extends "partials/content-post.twig" %}
 
 {% block post_content %}
-    <section>
+    <section am-text="spaced">
 
         <p><img src="{{ post.thumbnail.src('big') }}" alt="{{ post.thumbnail.post_title }}" /></p>
 
@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block post_comments %}
-    <section am-text="silver uppercased spaced centered">
+    <section am-text="300 silver uppercased spaced centered">
         <a href="{{ post.link }}#commentForm">komentarze {{ post.comment_count }}</a>
     </section>
 {% endblock %}

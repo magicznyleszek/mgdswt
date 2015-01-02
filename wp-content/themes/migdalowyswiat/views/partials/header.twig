@@ -7,7 +7,7 @@
         <a am-button="naked" id="appMenuOpener" href="#appMenu">
             <img src="{{ theme.link }}/img/icons/menu-burger.png" alt="=">
         </a>
-        
+
         <a am-button="naked" id="appMenuCloser" href="#closeAppMenu">
             <img src="{{ theme.link }}/img/icons/menu-close.png" alt="x">
         </a>
@@ -17,7 +17,7 @@
             <!-- pages nav -->
             {% if glowneMenu.get_items is not empty %}
                 <nav id="appMenuPages">
-                    <ul am-list="inline spaced" am-text="uppercased">
+                    <ul am-list="inline spaced" am-text="uppercased spaced">
                         {% for item in glowneMenu.get_items %}
 
                             <li><a href="{{item.url}}">{{ item.title }}</a></li>
@@ -37,12 +37,12 @@
 
             <!-- social nav -->
             <nav id="appMenuSocial" am-box="paddedH" am-text="centered">
-                <ul am-list="inline spacedHLittle">
+                <ul am-list="inline spacedHSmall">
                     {% for item in socialMenu %}
 
                         <li>
                             <a href="{{ item.url }}" am-button="naked spaceless" target="_blank">
-                                <img src="{{ theme.link }}/img/icons/{{ item.icon }}.png" alt="{{ item.title }}">
+                                <img am-icon src="{{ theme.link }}/img/icons/{{ item.icon }}.png" alt="{{ item.title }}">
                             </a>
                         </li>
 

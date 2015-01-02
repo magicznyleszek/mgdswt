@@ -35,6 +35,13 @@
     }
 }
 
+[am-list~="spacedHSmall"] {
+    & > li {
+        padding-left: rem($w-small);
+        padding-right: rem($w-small);
+    }
+}
+
 [am-list~="padded"] {
     padding: rem($w-small);
 }

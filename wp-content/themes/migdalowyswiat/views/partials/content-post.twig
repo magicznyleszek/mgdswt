@@ -7,14 +7,14 @@
             <h2><a href="{{ post.link }}">{{ post.post_title }}</a></h2>
 
             {% block post_header_meta %}
-                <div am-text="silver uppercased spacedBig">
+                <div am-text="300 silver uppercased spacedBig">
 
-                    <span am-box="inline">{{ post.post_date|date }}</span>
+                    <small am-box="inline">{{ post.post_date|date }}</small>
 
                     {% if post.terms('categories') is not empty %}
                         <ul am-list="inline spacedHLittle">
                             {% for term in post.terms('categories') %}
-                                <li><a href="{{ term.link }}">{{term.name}}</a></li>
+                                <li><a href="{{ term.link }}"><small>{{term.name}}</small></a></li>
                             {% endfor %}
                         </ul>
                     {% endif %}
@@ -26,7 +26,7 @@
     {% endblock %}
 
     {% block post_content %}
-        <section>
+        <section am-text="spaced">
             {{ post.content }}
         </section>
     {% endblock %}
@@ -59,21 +59,21 @@
                     <!-- Facebook -->
                     <li>
                         <a href="http://www.facebook.com/sharer.php?u={{ post.link }}" am-button="naked spaceless" target="_blank">
-                            <img src="{{ theme.link }}/img/icons/facebook-gray-o.png" alt="Facebook">
+                            <img am-icon src="{{ theme.link }}/img/icons/facebook-gray-o.png" alt="Facebook">
                         </a>
                     </li>
 
                     <!-- Pinterest -->
                     <li>
                         <a href="http://pinterest.com/pin/create/link/?url={{ post.link }}" am-button="naked spaceless" target="_blank">
-                            <img src="{{ theme.link }}/img/icons/pinterest-gray-o.png" alt="Pinterest">
+                            <img am-icon src="{{ theme.link }}/img/icons/pinterest-gray-o.png" alt="Pinterest">
                         </a>
                     </li>
 
                     <!-- Email -->
                     <li>
                         <a href="mailto:?Subject={{ site.title }}&Body={{ post.link }}" am-button="naked spaceless" target="_blank">
-                            <img src="{{ theme.link }}/img/icons/envelope-gray-o.png" alt="Mail">
+                            <img am-icon src="{{ theme.link }}/img/icons/envelope-gray-o.png" alt="Mail">
                         </a>
                     </li>
 

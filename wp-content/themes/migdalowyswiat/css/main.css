@@ -138,24 +138,24 @@ img, svg, embed, object, video {
 
 /* line 46, ../scss/base/_normalize.scss */
 input, select, textarea, button {
-  line-height: 1.5;
+  line-height: 1.75;
 }
 /* line 4, ../scss/config/helpers/_placeholder.scss */
 input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder, button::-moz-placeholder {
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1.75;
   color: rgba(148, 148, 148, 0.5);
 }
 /* line 5, ../scss/config/helpers/_placeholder.scss */
 input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder, button::-webkit-input-placeholder {
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1.75;
   color: rgba(148, 148, 148, 0.5);
 }
 /* line 6, ../scss/config/helpers/_placeholder.scss */
 input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, button:-ms-input-placeholder {
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1.75;
   color: rgba(148, 148, 148, 0.5);
 }
 
@@ -187,15 +187,15 @@ pre code {
 
 /* line 1, ../scss/base/_typography.scss */
 html {
-  font: 400 16px/1.5 "Hind", sans-serif;
+  font: 400 16px/1.75 "Hind", sans-serif;
 }
 
 /* line 11, ../scss/base/_typography.scss */
 h1, h2, h3, h4 {
   line-height: 1;
   margin: 0;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 
 /* line 18, ../scss/base/_typography.scss */
@@ -300,7 +300,7 @@ article:not(:last-child), section:not(:last-child), header:not(:last-child), foo
 [am-line]:not([am-line~="inline"]):not(:last-child),
 [am-progress]:not([am-progress~="inline"]):not(:last-child),
 table > caption:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 /* line 26, ../scss/base/_spacing.scss */
@@ -534,7 +534,7 @@ label:not(:last-child),
   outline: 0;
   padding: 0.6875rem 0.625rem 0.6875rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -573,15 +573,16 @@ label:not(:last-child),
   box-shadow: none;
   background-color: transparent;
   font-weight: inherit;
+  line-height: 1;
 }
-/* line 45, ../scss/modules/buttons/_module.scss */
+/* line 46, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"]:not([disabled]):hover {
   color: inherit;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
   background-color: transparent;
 }
-/* line 50, ../scss/modules/buttons/_module.scss */
+/* line 51, ../scss/modules/buttons/_module.scss */
 [am-button~="naked"]:not([disabled]):active, [am-button~="naked"]:not([disabled]).active {
   color: inherit;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
@@ -589,7 +590,7 @@ label:not(:last-child),
   background-color: transparent;
 }
 
-/* line 57, ../scss/modules/buttons/_module.scss */
+/* line 58, ../scss/modules/buttons/_module.scss */
 [am-button~="hidden"] {
   visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -601,30 +602,30 @@ label:not(:last-child),
   position: absolute;
 }
 
-/* line 65, ../scss/modules/buttons/_module.scss */
+/* line 66, ../scss/modules/buttons/_module.scss */
 [am-button~="spaceless"] {
   padding: 0 !important;
 }
 
-/* line 69, ../scss/modules/buttons/_module.scss */
+/* line 70, ../scss/modules/buttons/_module.scss */
 [am-button~="spacelessH"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 74, ../scss/modules/buttons/_module.scss */
+/* line 75, ../scss/modules/buttons/_module.scss */
 [am-button~="wide"] {
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
-/* line 79, ../scss/modules/buttons/_module.scss */
+/* line 80, ../scss/modules/buttons/_module.scss */
 [am-button~="small"] {
   font-size: 75%;
   padding: 0.5625rem 0.625rem 0.4375rem;
 }
 
-/* line 84, ../scss/modules/buttons/_module.scss */
+/* line 85, ../scss/modules/buttons/_module.scss */
 [am-button~="full"] {
   width: 100%;
   text-align: left;
@@ -1892,7 +1893,13 @@ label:not(:last-child),
   padding-right: 0.5rem;
 }
 
-/* line 38, ../scss/modules/lists/_module.scss */
+/* line 39, ../scss/modules/lists/_module.scss */
+[am-list~="spacedHSmall"] > li {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+/* line 45, ../scss/modules/lists/_module.scss */
 [am-list~="padded"] {
   padding: 0.625rem;
 }
@@ -1977,7 +1984,7 @@ label:not(:last-child),
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
 }
 /* line 64, ../scss/modules/postSquares/_module.scss */
 [am-postSquare] [am-postSquare-content] [am-postSquare-meta] span {
@@ -2146,7 +2153,7 @@ label:not(:last-child),
   outline: 0;
   margin: 0;
   border: 0;
-  padding: 0.375rem 0.3125rem 0.25rem;
+  padding: 0.125rem 0.3125rem 0;
   color: #949494;
   font-size: 0.75rem;
   background-color: transparent;
@@ -2208,64 +2215,79 @@ label:not(:last-child),
     <p am-text="uppercased centered">UPPERCASED CENTERED</p>
 */
 /* line 8, ../scss/modules/texts/_module.scss */
+[am-text~="300"] {
+  font-weight: 300;
+}
+
+/* line 9, ../scss/modules/texts/_module.scss */
+[am-text~="400"] {
+  font-weight: 400;
+}
+
+/* line 10, ../scss/modules/texts/_module.scss */
+[am-text~="600"] {
+  font-weight: 600;
+}
+
+/* line 13, ../scss/modules/texts/_module.scss */
 [am-text~="lefted"] {
   text-align: left;
 }
 
-/* line 9, ../scss/modules/texts/_module.scss */
+/* line 14, ../scss/modules/texts/_module.scss */
 [am-text~="righted"] {
   text-align: right;
 }
 
-/* line 10, ../scss/modules/texts/_module.scss */
+/* line 15, ../scss/modules/texts/_module.scss */
 [am-text~="centered"] {
   text-align: center;
 }
 
-/* line 13, ../scss/modules/texts/_module.scss */
+/* line 18, ../scss/modules/texts/_module.scss */
 [am-text~="uppercased"] {
   text-transform: uppercase;
 }
 
-/* line 14, ../scss/modules/texts/_module.scss */
+/* line 19, ../scss/modules/texts/_module.scss */
 [am-text~="untransformed"] {
   text-transform: none;
 }
 
-/* line 17, ../scss/modules/texts/_module.scss */
+/* line 22, ../scss/modules/texts/_module.scss */
 [am-text~="spaced"] {
   letter-spacing: 0.0625rem;
 }
 
-/* line 18, ../scss/modules/texts/_module.scss */
+/* line 23, ../scss/modules/texts/_module.scss */
 [am-text~="spacedBig"] {
   letter-spacing: 0.125rem;
 }
 
-/* line 21, ../scss/modules/texts/_module.scss */
+/* line 26, ../scss/modules/texts/_module.scss */
 [am-text~="trimmed"] {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-/* line 28, ../scss/modules/texts/_module.scss */
+/* line 33, ../scss/modules/texts/_module.scss */
 [am-text~="dimmed"] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
-/* line 29, ../scss/modules/texts/_module.scss */
+/* line 34, ../scss/modules/texts/_module.scss */
 [am-text~="nero"] {
   color: #262626;
 }
 
-/* line 30, ../scss/modules/texts/_module.scss */
+/* line 35, ../scss/modules/texts/_module.scss */
 [am-text~="silver"] {
   color: gray;
 }
 
-/* line 31, ../scss/modules/texts/_module.scss */
+/* line 36, ../scss/modules/texts/_module.scss */
 [am-text~="silverLight"] {
   color: #949494;
 }
@@ -2276,7 +2298,7 @@ label:not(:last-child),
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  color: black;
+  color: #262626;
   background-color: white;
   padding-bottom: 5rem;
 }
