@@ -1,10 +1,10 @@
 <article class="post-comment" id="comment-{{ commentIndex }}">
 
     <header>
-        <h4 am-box="inline">{{ comment.comment_author }} <small am-text="silver">{{ function('wp_days_ago_v3') }}</small></h4>
+        <h4 am-box="inline">{{ comment.comment_author }} <small am-text="silver 300">{{ function('wp_days_ago_v3') }}</small></h4>
     </header>
 
-    <section>
+    <section am-text="spaced">
         {{ comment.comment_content }}
     </section>
 
