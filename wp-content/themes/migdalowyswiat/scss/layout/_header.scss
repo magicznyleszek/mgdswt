@@ -112,4 +112,7 @@
 #appBanner {
     padding-top: rem($space-colossal + $appMenu-h);
     padding-bottom: rem($space-giant);
+    #logo {
+        max-width: 90%;
+    }
 }

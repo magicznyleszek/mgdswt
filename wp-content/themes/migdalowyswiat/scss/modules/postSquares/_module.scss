@@ -12,11 +12,17 @@
     vertical-align: middle;
     @include box-sizing(border-box);
     @include box-shadow($postSquare-sh);
-    width: $postSquare-w;
-    height: $postSquare-w;
     margin: $space-medium !important;
     overflow: hidden;
     text-align: center;
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        width: $postSquare-w;
+        height: $postSquare-w;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        width: $postSquare-mobile-w;
+        height: $postSquare-mobile-w;
+    }
     &:not(:hover) {
         background: transparent !important;
         [am-postSquare-bg] {
