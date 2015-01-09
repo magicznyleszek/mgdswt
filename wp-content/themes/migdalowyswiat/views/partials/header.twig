@@ -9,7 +9,8 @@
         </a>
 
         <a am-button="naked" id="appMenuCloser" href="#closeAppMenu">
-            <img src="{{ theme.link }}/img/icons/menu-close.png" alt="x">
+            {# <img src="{{ theme.link }}/img/icons/menu-close.png" alt="x"> #}
+            <img src="{{ theme.link }}/img/icons/menu-burger.png" alt="=">
         </a>
 
         <div id="appMenuWrapper" am-box="wrapper">
@@ -42,7 +43,7 @@
 
                         <li>
                             <a href="{{ item.url }}" am-button="naked spaceless" target="_blank">
-                                <img am-icon src="{{ theme.link }}/img/icons/{{ item.icon }}.png" alt="{{ item.title }}">
+                                <img am-icon src="{{ theme.link }}/img/icons/{{ item.icon }}-big.png" alt="{{ item.title }}">
                             </a>
                         </li>
 
@@ -57,7 +58,7 @@
     <section id="appBanner" am-text="centered">
 
         <a href="{{ site.url }}" am-button="naked spaceless">
-            <img id="logo" src="{{ theme.link }}/img/migdalowyswiat-logo-420.jpg" alt="{{ site.title }}">
+            <img id="logo" src="{{ theme.link }}/img/migdalowyswiat-logo-420.png" alt="{{ site.title }}">
         </a>
 
     </section>

@@ -2369,7 +2369,7 @@ label:not(:last-child),
     position: fixed;
     z-index: 80;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
     -moz-transition: 0.75s;
     -o-transition: 0.75s;
     -webkit-transition: 0.75s;
@@ -2423,7 +2423,7 @@ label:not(:last-child),
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-    width: 75%;
+    width: 100%;
   }
   /* line 78, ../scss/layout/_header.scss */
   #appMenuPages [am-list] > li {
@@ -2462,6 +2462,10 @@ label:not(:last-child),
   }
 }
 
+/* line 95, ../scss/layout/_header.scss */
+#appMenuSocial [am-list] {
+  white-space: nowrap;
+}
 @media screen and (min-width: 641px) {
   /* line 94, ../scss/layout/_header.scss */
   #appMenuSocial {
@@ -2473,6 +2477,11 @@ label:not(:last-child),
     width: 16.66667%;
     vertical-align: middle;
   }
+  /* line 101, ../scss/layout/_header.scss */
+  #appMenuSocial [am-icon] {
+    width: 1.3125rem;
+    height: 1.3125rem;
+  }
 }
 @media screen and (max-width: 640px) {
   /* line 94, ../scss/layout/_header.scss */
@@ -2482,12 +2491,12 @@ label:not(:last-child),
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-    width: 75%;
+    width: 100%;
     padding: 10px;
   }
 }
 
-/* line 105, ../scss/layout/_header.scss */
+/* line 112, ../scss/layout/_header.scss */
 #appBanner {
   padding-top: 8.5rem;
   padding-bottom: 2.5rem;
