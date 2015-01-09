@@ -1,0 +1,19 @@
+// responsives module
+
+/*
+    <p am-responsive="mobile">
+        ONLY ON MOBILE
+    </p>
+*/
+
+[am-responsive~="mobile"] {
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        display: none !important;
+    }
+}
+
+[am-responsive~="desktop"] {
+    @media screen and (max-width: #{$break-smaller}) {
+        display: none !important;
+    }
+}

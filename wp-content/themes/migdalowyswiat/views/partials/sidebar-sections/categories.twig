@@ -1,0 +1,14 @@
+<section am-text="centered spaced" am-box="paddedH">
+
+    <h3><a href="{{ site.link }}/kategorie">Kategorie</a></h3>
+
+    {% if categories is not empty %}
+        <ul am-list>
+            {% for category in categories %}
+
+                <li><a href="{{ category.link }}">{{ category.name }}</a></li>
+
+            {% endfor %}
+        </ul>
+    {% endif %}
+</section>

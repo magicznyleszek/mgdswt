@@ -15,6 +15,14 @@
 
         <div id="appMenuWrapper" am-box="wrapper">
 
+            <!-- search box mobile -->
+            <div id="appMenuSearch" am-box="paddedH" am-responsive="mobile" am-columnPull="3/12">
+                <form id="searchform" method="get" action="{{ site.url }}/index.php">
+                    <input am-textBox type="text" name="s" id="s" value="" placeholder="Wyszukaj na blogu">
+                    <input am-button="hidden" type="submit" value="Search">
+                </form>
+            </div>
+
             <!-- pages nav -->
             {% if glowneMenu.get_items is not empty %}
                 <nav id="appMenuPages">
@@ -28,8 +36,8 @@
                 </nav>
             {% endif %}
 
-            <!-- search box -->
-            <div id="appMenuSearch" am-box="paddedH">
+            <!-- search box desktop -->
+            <div id="appMenuSearch" am-box="paddedH" am-responsive="desktop">
                 <form id="searchform" method="get" action="{{ site.url }}/index.php">
                     <input am-textBox type="text" name="s" id="s" value="" placeholder="Wyszukaj na blogu">
                     <input am-button="hidden" type="submit" value="Search">
@@ -51,6 +59,13 @@
                 </ul>
             </nav>
 
+            <!-- newsletter mobile -->
+            <div id="appMenuNewsletter" am-responsive="mobile">
+
+                {% include "partials/sidebar-sections/newsletter.twig" %}
+
+            </div>
+
         </div>
 
     </section>
@@ -60,6 +75,13 @@
         <a href="{{ site.url }}" am-button="naked spaceless">
             <img id="logo" src="{{ theme.link }}/img/migdalowyswiat-logo-420.png" alt="{{ site.title }}">
         </a>
+
+    </section>
+
+    <!-- about me mobile -->
+    <section am-responsive="mobile" am-box="paddedV">
+
+        {% include "partials/sidebar-sections/about-me.twig" %}
 
     </section>
 

@@ -1,59 +1,12 @@
 {# sidebar template #}
-<aside id="appSidebar" am-box="paddedH" am-text="centered spaced">
+<aside id="appSidebar" am-responsive="desktop">
 
-    <!-- newsletter -->
-    <section id="sidebarNewsletter">
+    {% include "partials/sidebar-sections/newsletter.twig" %}
 
-        <h3>Newsletter</h3>
+    {% include "partials/sidebar-sections/about-me.twig" %}
 
-        {% include "partials/newsletter-form.twig" %}
+    {% include "partials/sidebar-sections/categories.twig" %}
 
-        <p>Bądź na bieżąco z nowymi wpisami na blogu.</p>
-
-    </section>
-
-    <!-- about me -->
-    <section>
-
-        <h3><a href="{{ site.link }}/o-mnie">O mnie</a></h3>
-
-        <p><img src="{{ theme.link }}/img/migdalowyswiat-avatar-165.png"></p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi lobortis, rhoncus metus eget, sagittis diam. Duis a massa in mauris aliquam tristique vitae ac mauris.</p>
-
-    </section>
-
-    <!-- categories -->
-    <section>
-
-        <h3><a href="{{ site.link }}/kategorie">Kategorie</a></h3>
-
-        {% if categories is not empty %}
-            <ul am-list>
-                {% for category in categories %}
-
-                    <li><a href="{{ category.link }}">{{ category.name }}</a></li>
-
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </section>
-
-    <!-- favourites -->
-    <section>
-
-        <h3><a href="{{ site.link }}/ulubione">Ulubione</a></h3>
-
-        {% if ulubioneMenu.get_items is not empty %}
-            <ul am-list>
-                {% for item in ulubioneMenu.get_items %}
-
-                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-
-                {% endfor %}
-            </ul>
-        {% endif %}
-
-    </section>
+    {% include "partials/sidebar-sections/favourites.twig" %}
 
 </aside>

@@ -20,13 +20,29 @@
 }
 
 .post-social {
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        [am-icon] {
+            width: rem(21px);
+            height: rem(21px);
+        }
+    }
     hr {
-        @include column(2,5);
-        vertical-align: middle;
+        vertical-align: middle !important;
+        @media screen and (min-width: #{$break-smaller + 1}) {
+            @include column(2,5);
+        }
+        @media screen and (max-width: #{$break-smaller}) {
+            @include column(1,6);
+        }
     }
     nav {
-        @include column(1,5);
-        vertical-align: middle;
+        vertical-align: middle !important;
+        @media screen and (min-width: #{$break-smaller + 1}) {
+            @include column(1,5);
+        }
+        @media screen and (max-width: #{$break-smaller}) {
+            @include column(4,6);
+        }
     }
 }
 
@@ -46,4 +62,15 @@
 #pagination {
     padding-top: rem($space-giant);
     padding-bottom: rem($space-giant);
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        [am-icon] {
+            width: rem(21px);
+            height: rem(21px);
+        }
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        [am-icon] {
+            vertical-align: rem(-14px);
+        }
+    }
 }

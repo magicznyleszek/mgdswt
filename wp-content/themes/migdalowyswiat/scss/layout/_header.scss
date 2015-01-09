@@ -51,6 +51,8 @@
         @include transition($d-slow);
         overflow: auto;
         background-color: $appMenu-bg-c;
+        padding-top: $space-medium;
+        padding-bottom: $space-medium;
     }
 }
 
@@ -81,6 +83,7 @@
         }
     }
 }
+
 #appMenuSearch {
     @media screen and (min-width: #{$break-smaller + 1}) {
         @include column(3,12);
@@ -88,9 +91,10 @@
     }
     @media screen and (max-width: #{$break-smaller}) {
         @include column(9,12);
-        padding: $space-small;
+        padding: $space-medium $space-small;
     }
 }
+
 #appMenuSocial {
     [am-list] {
         white-space: nowrap;
@@ -105,13 +109,22 @@
     }
     @media screen and (max-width: #{$break-smaller}) {
         @include column();
-        padding: $space-small;
+        padding: $space-medium $space-small;
+    }
+}
+
+#appMenuNewsletter {
+    @media screen and (max-width: #{$break-smaller}) {
+        padding-top: $space-medium;
+        padding-bottom: $space-medium;
     }
 }
 
 #appBanner {
     padding-top: rem($space-colossal + $appMenu-h);
-    padding-bottom: rem($space-giant);
+    &:last-child {
+        padding-bottom: rem($space-giant);
+    }
     #logo {
         max-width: 90%;
     }

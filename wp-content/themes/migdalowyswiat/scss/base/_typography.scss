@@ -28,9 +28,14 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: rem(1px);
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        font-size: 1rem;
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        font-size: rem(24px);
+    }
 }
 
 h4 {

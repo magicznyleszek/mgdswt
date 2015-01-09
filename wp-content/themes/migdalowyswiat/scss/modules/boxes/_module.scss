@@ -34,6 +34,11 @@
     padding-right: rem($space-medium);
 }
 
+[am-box~="paddedV"] {
+    padding-top: rem($space-medium);
+    padding-bottom: rem($space-medium);
+}
+
 [am-box~="black"] {
     color: $box-black-txt-c;
     background-color: $box-black-bg-c;
