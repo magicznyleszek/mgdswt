@@ -121,7 +121,12 @@
 }
 
 #appBanner {
-    padding-top: rem($space-colossal + $appMenu-h);
+    @media screen and (min-width: #{$break-smaller + 1}) {
+        padding-top: rem($space-colossal + $appMenu-h);
+    }
+    @media screen and (max-width: #{$break-smaller}) {
+        padding-top: rem($space-colossal);
+    }
     &:last-child {
         padding-bottom: rem($space-giant);
     }

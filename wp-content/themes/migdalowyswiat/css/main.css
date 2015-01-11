@@ -2556,15 +2556,23 @@ label:not(:last-child),
   }
 }
 
-/* line 123, ../scss/layout/_header.scss */
-#appBanner {
-  padding-top: 8.5rem;
+@media screen and (min-width: 641px) {
+  /* line 123, ../scss/layout/_header.scss */
+  #appBanner {
+    padding-top: 8.5rem;
+  }
 }
-/* line 125, ../scss/layout/_header.scss */
+@media screen and (max-width: 640px) {
+  /* line 123, ../scss/layout/_header.scss */
+  #appBanner {
+    padding-top: 5rem;
+  }
+}
+/* line 130, ../scss/layout/_header.scss */
 #appBanner:last-child {
   padding-bottom: 2.5rem;
 }
-/* line 128, ../scss/layout/_header.scss */
+/* line 133, ../scss/layout/_header.scss */
 #appBanner #logo {
   max-width: 90%;
 }
