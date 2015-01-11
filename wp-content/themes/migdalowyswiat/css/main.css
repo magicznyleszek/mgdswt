@@ -2576,8 +2576,12 @@ label:not(:last-child),
   margin-right: auto;
 }
 
+/* line 7, ../scss/layout/_content.scss */
+#appContent {
+  overflow: hidden;
+}
 @media screen and (min-width: 641px) {
-  /* line 9, ../scss/layout/_content.scss */
+  /* line 10, ../scss/layout/_content.scss */
   #appContent:not(.fullWidth) {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2587,29 +2591,29 @@ label:not(:last-child),
     width: 83.33333%;
   }
 }
-/* line 13, ../scss/layout/_content.scss */
+/* line 14, ../scss/layout/_content.scss */
 #appContent.fullWidth {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 17, ../scss/layout/_content.scss */
+/* line 18, ../scss/layout/_content.scss */
 #appContent > article:not(:last-of-type) {
   margin-bottom: 2.5rem;
 }
 
 @media screen and (min-width: 641px) {
-  /* line 24, ../scss/layout/_content.scss */
+  /* line 25, ../scss/layout/_content.scss */
   .post-social [am-icon] {
     width: 1.3125rem;
     height: 1.3125rem;
   }
 }
-/* line 29, ../scss/layout/_content.scss */
+/* line 30, ../scss/layout/_content.scss */
 .post-social hr {
   vertical-align: middle !important;
 }
 @media screen and (min-width: 641px) {
-  /* line 29, ../scss/layout/_content.scss */
+  /* line 30, ../scss/layout/_content.scss */
   .post-social hr {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2620,7 +2624,7 @@ label:not(:last-child),
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 29, ../scss/layout/_content.scss */
+  /* line 30, ../scss/layout/_content.scss */
   .post-social hr {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2630,12 +2634,12 @@ label:not(:last-child),
     width: 16.66667%;
   }
 }
-/* line 38, ../scss/layout/_content.scss */
+/* line 39, ../scss/layout/_content.scss */
 .post-social nav {
   vertical-align: middle !important;
 }
 @media screen and (min-width: 641px) {
-  /* line 38, ../scss/layout/_content.scss */
+  /* line 39, ../scss/layout/_content.scss */
   .post-social nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2646,7 +2650,7 @@ label:not(:last-child),
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 38, ../scss/layout/_content.scss */
+  /* line 39, ../scss/layout/_content.scss */
   .post-social nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2657,18 +2661,18 @@ label:not(:last-child),
   }
 }
 
-/* line 49, ../scss/layout/_content.scss */
+/* line 50, ../scss/layout/_content.scss */
 .post-comment {
   padding-bottom: 2rem;
 }
 
-/* line 53, ../scss/layout/_content.scss */
+/* line 54, ../scss/layout/_content.scss */
 #commentForm {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 641px) {
-  /* line 56, ../scss/layout/_content.scss */
+  /* line 57, ../scss/layout/_content.scss */
   #commentForm #commentForm-footer {
     display: -webkit-flex;
     display: flex;
@@ -2679,48 +2683,48 @@ label:not(:last-child),
   }
 }
 @media screen and (min-width: 641px) {
-  /* line 63, ../scss/layout/_content.scss */
+  /* line 64, ../scss/layout/_content.scss */
   #commentForm #commentForm-inputs {
     -webkit-flex: 1;
     flex: 1;
   }
 }
 @media screen and (min-width: 641px) {
-  /* line 67, ../scss/layout/_content.scss */
+  /* line 68, ../scss/layout/_content.scss */
   #commentForm #commentForm-inputs #author {
     max-width: 20rem;
     margin-right: 2rem;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 67, ../scss/layout/_content.scss */
+  /* line 68, ../scss/layout/_content.scss */
   #commentForm #commentForm-inputs #author {
     width: 100%;
     margin-bottom: 1.75rem;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 77, ../scss/layout/_content.scss */
+  /* line 78, ../scss/layout/_content.scss */
   #commentForm #commentForm-inputs #submit-comment {
     width: 100%;
     margin-bottom: 1.75rem;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 84, ../scss/layout/_content.scss */
+  /* line 85, ../scss/layout/_content.scss */
   #commentForm #commentForm-counter {
     width: 100%;
     text-align: center;
   }
 }
 
-/* line 92, ../scss/layout/_content.scss */
+/* line 93, ../scss/layout/_content.scss */
 #pagination {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 641px) {
-  /* line 96, ../scss/layout/_content.scss */
+  /* line 97, ../scss/layout/_content.scss */
   #pagination #pagination-prev, #pagination #pagination-next {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2730,33 +2734,33 @@ label:not(:last-child),
     width: 50%;
     vertical-align: middle;
   }
-  /* line 100, ../scss/layout/_content.scss */
+  /* line 101, ../scss/layout/_content.scss */
   #pagination #pagination-prev {
     text-align: left;
   }
-  /* line 103, ../scss/layout/_content.scss */
+  /* line 104, ../scss/layout/_content.scss */
   #pagination #pagination-next {
     text-align: right;
   }
-  /* line 106, ../scss/layout/_content.scss */
+  /* line 107, ../scss/layout/_content.scss */
   #pagination [am-icon] {
     width: 1.3125rem;
     height: 1.3125rem;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 92, ../scss/layout/_content.scss */
+  /* line 93, ../scss/layout/_content.scss */
   #pagination {
     text-align: center;
   }
-  /* line 113, ../scss/layout/_content.scss */
+  /* line 114, ../scss/layout/_content.scss */
   #pagination #pagination-prev, #pagination #pagination-next {
     display: inline-block;
     vertical-align: middle;
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  /* line 119, ../scss/layout/_content.scss */
+  /* line 120, ../scss/layout/_content.scss */
   #pagination [am-icon] {
     vertical-align: -0.875rem;
   }

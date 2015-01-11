@@ -5,6 +5,7 @@
 }
 
 #appContent {
+    overflow: hidden;
     @media screen and (min-width: #{$break-smaller + 1}) {
         &:not(.fullWidth) {
             @include column(5,6);
