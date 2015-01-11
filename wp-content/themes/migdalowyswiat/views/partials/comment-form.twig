@@ -4,14 +4,14 @@
         <textarea am-textBox="special" id="comment" placeholder="Wpisz komentarz" name="comment" cols="40" rows="5"></textarea>
     </section>
 
-    <section am-flexContainer="horizontal centered">
+    <section id="commentForm-footer">
 
-        <div am-flexItem>
+        <div id="commentForm-inputs">
             <input am-textBox="special" id="author" name="author" type="text" placeholder="Imię" value="">
             <input am-button="wide" name="submit" type="submit" id="submit-comment" value="Wyślij">
         </div>
 
-        <div am-box="paddedH" am-text="300 silver uppercased spaced">komentarze {{ form_comment_count }}</div>
+        <div id="commentForm-counter" am-box="paddedH" am-text="300 silver uppercased spaced">komentarze {{ form_comment_count }}</div>
 
     </section>
 

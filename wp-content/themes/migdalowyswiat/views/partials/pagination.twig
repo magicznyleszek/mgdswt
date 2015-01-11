@@ -1,7 +1,7 @@
 {# pagination template #}
 <nav id="pagination" am-text="silver">
 
-    <div am-column="1/2" am-text="lefted">
+    <div id="pagination-prev">
         {% if pagination.prev %}
             <a href="{{ pagination.prev.link }}" am-button="naked spacelessH">
                 <img am-icon src="{{ theme.link }}/img/icons/angle-left-circle-gray-o-big.png" alt="<">
@@ -10,7 +10,7 @@
         {% endif %}
     </div>
 
-    <div am-column="1/2" am-text="righted">
+    <div id="pagination-next">
         {% if pagination.next %}
             <a href="{{ pagination.next.link }}" am-button="naked spacelessH">
                 <span am-box="inline">starsze posty</span>

@@ -53,9 +53,39 @@
 #commentForm {
     padding-top: rem($space-giant);
     padding-bottom: rem($space-giant);
-    input#author {
-        max-width: rem(320px);
-        margin-right: rem($space-big);
+    #commentForm-footer {
+        @media screen and (min-width: #{$break-smaller + 1}) {
+            @include display-flex;
+            @include flex-direction(row);
+            @include align-items(center);
+        }
+    }
+    #commentForm-inputs {
+        @media screen and (min-width: #{$break-smaller + 1}) {
+            @include flex(1);
+        }
+        #author {
+            @media screen and (min-width: #{$break-smaller + 1}) {
+                max-width: rem(320px);
+                margin-right: rem($space-big);
+            }
+            @media screen and (max-width: #{$break-smaller}) {
+                width: 100%;
+                margin-bottom: $rootLineHeight * 1rem;
+            }
+        }
+        #submit-comment {
+            @media screen and (max-width: #{$break-smaller}) {
+                width: 100%;
+                margin-bottom: $rootLineHeight * 1rem;
+            }
+        }
+    }
+    #commentForm-counter {
+        @media screen and (max-width: #{$break-smaller}) {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
@@ -63,12 +93,29 @@
     padding-top: rem($space-giant);
     padding-bottom: rem($space-giant);
     @media screen and (min-width: #{$break-smaller + 1}) {
+        #pagination-prev, #pagination-next {
+            @include column(1,2);
+            vertical-align: middle;
+        }
+        #pagination-prev {
+            text-align: left;
+        }
+        #pagination-next {
+            text-align: right;
+        }
         [am-icon] {
             width: rem(21px);
             height: rem(21px);
         }
     }
     @media screen and (max-width: #{$break-smaller}) {
+        text-align: center;
+        #pagination-prev, #pagination-next {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: rem($space-medium);
+            margin-right: rem($space-medium);
+        }
         [am-icon] {
             vertical-align: rem(-14px);
         }

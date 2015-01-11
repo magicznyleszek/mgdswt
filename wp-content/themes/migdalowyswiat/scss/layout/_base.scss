@@ -4,4 +4,7 @@
     color: $app-txt-c;
     background-color: $app-bg-c;
     padding-bottom: rem($space-colossal);
+    &.scroll-disabled {
+        overflow: hidden;
+    }
 }

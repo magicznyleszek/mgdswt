@@ -3,6 +3,34 @@ function projectInterface() {
     this.run = run;
     function run() {
         disableHoverWhenScrolling();
+        initMobileMenu();
+    }
+
+    function initMobileMenu() {
+        // declarations
+        $body = $('body');
+        $window = $(window);
+        $menu = $('#appMenu');
+        $menuOpener = $('#appMenuOpener');
+        $menuCloser = $('#appMenuCloser');
+        activeClass = 'opened';
+        bodyActiveClass = 'scroll-disabled';
+
+        // toggling menu
+        $menuOpener.bind('click', function () {
+            $menu.addClass(activeClass);
+            $body.addClass(bodyActiveClass);
+        });
+        $menuCloser.bind('click', function () {
+            $menu.removeClass(activeClass);
+            $body.removeClass(bodyActiveClass);
+        });
+
+        // reset menu
+        $window.bind('resize', function () {
+            $menu.removeClass(activeClass);
+            $body.removeClass(bodyActiveClass);
+        });
     }
 
     function disableHoverWhenScrolling() {

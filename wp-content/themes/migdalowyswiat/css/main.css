@@ -2355,6 +2355,10 @@ label:not(:last-child),
   background-color: white;
   padding-bottom: 5rem;
 }
+/* line 7, ../scss/layout/_base.scss */
+#app.scroll-disabled {
+  overflow: hidden;
+}
 
 /* line 5, ../scss/layout/_header.scss */
 #appMenu {
@@ -2379,29 +2383,29 @@ label:not(:last-child),
     background-color: transparent;
   }
   /* line 18, ../scss/layout/_header.scss */
-  #appMenu:target #appMenuCloser {
+  #appMenu.opened #appMenuCloser {
     display: block;
   }
   /* line 21, ../scss/layout/_header.scss */
-  #appMenu:target #appMenuOpener {
+  #appMenu.opened #appMenuOpener {
     display: none;
   }
   /* line 24, ../scss/layout/_header.scss */
-  #appMenu:target #appMenuWrapper {
+  #appMenu.opened #appMenuWrapper {
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
     visibility: visible;
   }
   /* line 30, ../scss/layout/_header.scss */
-  #appMenu:not(:target) #appMenuCloser {
+  #appMenu:not(.opened) #appMenuCloser {
     display: none;
   }
   /* line 33, ../scss/layout/_header.scss */
-  #appMenu:not(:target) #appMenuOpener {
+  #appMenu:not(.opened) #appMenuOpener {
     display: block;
   }
   /* line 36, ../scss/layout/_header.scss */
-  #appMenu:not(:target) #appMenuWrapper {
+  #appMenu:not(.opened) #appMenuWrapper {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     visibility: hidden;
@@ -2424,8 +2428,6 @@ label:not(:last-child),
     transition: 0.75s;
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.96);
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 }
 
@@ -2665,26 +2667,96 @@ label:not(:last-child),
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-/* line 56, ../scss/layout/_content.scss */
-#commentForm input#author {
-  max-width: 20rem;
-  margin-right: 2rem;
+@media screen and (min-width: 641px) {
+  /* line 56, ../scss/layout/_content.scss */
+  #commentForm #commentForm-footer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 641px) {
+  /* line 63, ../scss/layout/_content.scss */
+  #commentForm #commentForm-inputs {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 641px) {
+  /* line 67, ../scss/layout/_content.scss */
+  #commentForm #commentForm-inputs #author {
+    max-width: 20rem;
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 67, ../scss/layout/_content.scss */
+  #commentForm #commentForm-inputs #author {
+    width: 100%;
+    margin-bottom: 1.75rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 77, ../scss/layout/_content.scss */
+  #commentForm #commentForm-inputs #submit-comment {
+    width: 100%;
+    margin-bottom: 1.75rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 84, ../scss/layout/_content.scss */
+  #commentForm #commentForm-counter {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-/* line 62, ../scss/layout/_content.scss */
+/* line 92, ../scss/layout/_content.scss */
 #pagination {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 641px) {
-  /* line 66, ../scss/layout/_content.scss */
+  /* line 96, ../scss/layout/_content.scss */
+  #pagination #pagination-prev, #pagination #pagination-next {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    vertical-align: middle;
+  }
+  /* line 100, ../scss/layout/_content.scss */
+  #pagination #pagination-prev {
+    text-align: left;
+  }
+  /* line 103, ../scss/layout/_content.scss */
+  #pagination #pagination-next {
+    text-align: right;
+  }
+  /* line 106, ../scss/layout/_content.scss */
   #pagination [am-icon] {
     width: 1.3125rem;
     height: 1.3125rem;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 72, ../scss/layout/_content.scss */
+  /* line 92, ../scss/layout/_content.scss */
+  #pagination {
+    text-align: center;
+  }
+  /* line 113, ../scss/layout/_content.scss */
+  #pagination #pagination-prev, #pagination #pagination-next {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  /* line 119, ../scss/layout/_content.scss */
   #pagination [am-icon] {
     vertical-align: -0.875rem;
   }
